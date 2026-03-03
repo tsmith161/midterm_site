@@ -54,6 +54,7 @@
 /* Background iamge */
 body {
     background-image: url("../pictures/bg.jpg");
+    background-repeat: repeat;
 }
 
 .hamburger {
