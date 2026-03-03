@@ -41,6 +41,10 @@
     flex-direction: column;
 }
 
+body {
+    background-image: url("../pictures/bg.jpg");
+}
+
 @media (max-width:800px) {
     .header {
         height: 80px;
