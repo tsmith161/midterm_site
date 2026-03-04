@@ -1,0 +1,41 @@
+[
+  {
+    "id": "starter",
+    "name": "Starter Box",
+    "tagline": "Simple meals for busy weekdays",
+    "weeklyPrice": 59,
+    "mealsPerWeek": 6,
+    "description": "Balanced dinners prepped fresh and ready in under 5 minutes.",
+    "features": [
+      "6 chef-made meals each week",
+      "Calorie-smart portions",
+      "1 free snack add-on"
+    ]
+  },
+  {
+    "id": "balance",
+    "name": "Balance Box",
+    "tagline": "Our most popular plan",
+    "weeklyPrice": 89,
+    "mealsPerWeek": 10,
+    "description": "A mix of high-protein, low-carb, and family-style options.",
+    "features": [
+      "10 chef-made meals each week",
+      "Priority delivery windows",
+      "2 free snack add-ons"
+    ]
+  },
+  {
+    "id": "performance",
+    "name": "Performance Box",
+    "tagline": "Fuel for active lifestyles",
+    "weeklyPrice": 119,
+    "mealsPerWeek": 14,
+    "description": "High-protein meals designed for training, recovery, and consistency.",
+    "features": [
+      "14 chef-made meals each week",
+      "Macro-focused menu labels",
+      "Free nutrition consult"
+    ]
+  }
+]

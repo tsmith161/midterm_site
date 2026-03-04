@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="meal delivery, meal prep, subscription plans, healthy meals, FreshBite pricing">
+    <title>FreshBite Pricing</title>
+    <link rel="stylesheet" href="../stylesheets/header.css">
+    <style>
+        .contentWrap {
+            width: min(1100px, 92%);
+            margin: 0 auto;
+            color: #1F3A1F;
+        }
+
+        .pageIntro {
+            background-color: rgba(245, 245, 245, 0.92);
+            border: 2px solid #2E7D32;
+            border-radius: 10px;
+            padding: 22px;
+            margin-bottom: 20px;
+        }
+
+        .pageIntro h2 {
+            margin-top: 0;
+            margin-bottom: 8px;
+            color: #1B5E20;
+        }
+
+        .pricingGrid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
+            margin-bottom: 24px;
+        }
+
+        .planCard {
+            background-color: rgba(255, 255, 255, 0.95);
+            border: 2px solid #4CAF50;
+            border-radius: 12px;
+            padding: 16px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12);
+        }
+
+        .planCard h3 {
+            margin-top: 0;
+            color: #1B5E20;
+        }
+
+        .planTagline {
+            font-weight: bold;
+            margin-top: 0;
+            color: #2E7D32;
+        }
+
+        .planPrice {
+            font-size: 24px;
+            color: #0D4711;
+            margin: 8px 0;
+        }
+
+        .planCard ul {
+            padding-left: 20px;
+            margin-bottom: 0;
+        }
+
+        .footer {
+            background-image: linear-gradient(to right, #2E7D32, #1B5E20);
+            padding: 12px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 12px;
+            margin-top: 25px;
+        }
+
+        .footer a {
+            color: #F5F5F5;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .footer img {
+            height: 50px;
+        }
+
+        @media (max-width: 900px) {
+            .pricingGrid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 400px) {
+            .pageIntro,
+            .planCard {
+                padding: 12px;
+            }
+
+            .planPrice {
+                font-size: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <a href="index.html"><img src="../pictures/freshlogo_s.png" alt="FreshBite logo"></a>
+        <div class="brandBox">
+            <h1>FreshBite&copy; Meal Prep</h1>
+            <p>Eating Healthy has never been easier</p>
+        </div>
+        <button class="hamburger" id="hamburger" onclick="var m=document.getElementById('menu'); m.style.visibility=(window.getComputedStyle(m).visibility==='hidden'?'visible':'hidden');">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </div>
+
+    <div class="space"></div>
+
+    <div class="menu" id="menu">
+        <a href="index.html"><h2>Home</h2></a>
+        <a href="about.html"><h2>About Us</h2></a>
+        <a href="pricing.html"><h2>Pricing</h2></a>
+        <a href="enrollment_form.html"><h2>Enroll</h2></a>
+        <a href="testimony.html"><h2>Testimonies</h2></a>
+    </div>
+
+    <div class="contentWrap">
+        <section class="pageIntro">
+            <h2>Subscription Pricing</h2>
+            <p>Choose a weekly meal plan that fits your goals. Every box includes fresh ingredients, chef-crafted recipes, and direct-to-door delivery.</p>
+        </section>
+
+        <section id="pricingGrid" class="pricingGrid" aria-label="Pricing plans">
+            <p>Loading pricing plans...</p>
+        </section>
+
+    </div>
+
+    <div class="footer">
+        <a href="index.html"><img src="../pictures/freshlogo_s.png" alt="FreshBite logo"></a>
+        <a href="index.html">Back to Home</a>
+    </div>
+
+    <script>
+        const pricingGrid = document.getElementById("pricingGrid");
+
+        fetch("./data/plans.json")
+            .then(response => response.json())
+            .then(plans => {
+                let html = "";
+
+                for (let i = 0; i < plans.length; i++) {
+                    const plan = plans[i];
+                    let featuresHtml = "";
+
+                    for (let j = 0; j < plan.features.length; j++) {
+                        featuresHtml += "<li>" + plan.features[j] + "</li>";
+                    }
+
+                    html += "<article class='planCard'>";
+                    html += "<h3>" + plan.name + "</h3>";
+                    html += "<p class='planTagline'>" + plan.tagline + "</p>";
+                    html += "<p class='planPrice'>$" + plan.weeklyPrice + "/week</p>";
+                    html += "<p>" + plan.mealsPerWeek + " meals per week</p>";
+                    html += "<p>" + plan.description + "</p>";
+                    html += "<ul>" + featuresHtml + "</ul>";
+                    html += "</article>";
+                }
+
+                pricingGrid.innerHTML = html;
+            })
+            .catch(() => {
+                pricingGrid.innerHTML = "<p>Could not load pricing plans right now.</p>";
+            });
+    </script>
+</body>
+</html>

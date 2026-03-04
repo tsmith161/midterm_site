@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="meal delivery enrollment, FreshBite signup, meal prep subscription form">
+    <title>FreshBite Enrollment</title>
+    <link rel="stylesheet" href="../stylesheets/header.css">
+    <style>
+        .contentWrap {
+            width: min(900px, 92%);
+            margin: 0 auto;
+            color: #1F3A1F;
+        }
+
+        .formCard {
+            background-color: rgba(255, 255, 255, 0.94);
+            border: 2px solid #2E7D32;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 24px;
+        }
+
+        .formCard h2 {
+            margin-top: 0;
+            margin-bottom: 6px;
+            color: #1B5E20;
+        }
+
+        .formGrid {
+            display: grid;
+            grid-template-columns: 180px 1fr;
+            row-gap: 12px;
+            column-gap: 12px;
+            align-items: center;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 9px;
+            border: 1px solid #9E9E9E;
+            border-radius: 6px;
+            box-sizing: border-box;
+            font-family: inherit;
+        }
+
+        textarea {
+            min-height: 90px;
+            resize: vertical;
+        }
+
+        .rowGroup {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 14px;
+        }
+
+        .rowGroup label {
+            font-weight: normal;
+        }
+
+        .rowGroup input {
+            width: auto;
+            padding: 0;
+        }
+
+        .errorBox {
+            color: #B71C1C;
+            background-color: #FFEBEE;
+            border: 1px solid #EF9A9A;
+            border-radius: 6px;
+            padding: 10px;
+            margin-bottom: 14px;
+            display: none;
+        }
+
+        .summaryBox {
+            background-color: #E8F5E9;
+            border: 1px solid #81C784;
+            border-radius: 6px;
+            padding: 10px;
+            margin-top: 14px;
+            display: none;
+        }
+
+        .buttonRow {
+            margin-top: 16px;
+            display: flex;
+            gap: 10px;
+        }
+
+        .buttonRow button {
+            background-color: #2E7D32;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            padding: 10px 16px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .buttonRow .secondary {
+            background-color: #757575;
+        }
+
+        .footer {
+            background-image: linear-gradient(to right, #2E7D32, #1B5E20);
+            padding: 12px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 12px;
+            margin-top: 25px;
+        }
+
+        .footer a {
+            color: #F5F5F5;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .footer img {
+            height: 50px;
+        }
+
+        @media (max-width: 750px) {
+            .formGrid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 400px) {
+            .formCard {
+                padding: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <a href="index.html"><img src="../pictures/freshlogo_s.png" alt="FreshBite logo"></a>
+        <div class="brandBox">
+            <h1>FreshBite&copy; Meal Prep</h1>
+            <p>Eating Healthy has never been easier</p>
+        </div>
+        <button class="hamburger" id="hamburger" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </div>
+
+    <div class="space"></div>
+
+    <div class="menu" id="menu">
+        <a href="index.html"><h2>Home</h2></a>
+        <a href="about.html"><h2>About Us</h2></a>
+        <a href="pricing.html"><h2>Pricing</h2></a>
+        <a href="enrollment_form.html"><h2>Enroll</h2></a>
+        <a href="testimony.html"><h2>Testimonies</h2></a>
+    </div>
+
+    <div class="contentWrap">
+        <section class="formCard">
+            <h2>Enroll in FreshBite</h2>
+            <p>Complete this quick form and our team will prepare your first delivery schedule.</p>
+
+            <div id="errorBox" class="errorBox"></div>
+
+            <form id="enrollForm" novalidate>
+                <div class="formGrid">
+                    <label for="fullName">Full Name</label>
+                    <input type="text" id="fullName" name="fullName" placeholder="FirstName LastName">
+
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="name@email.com">
+
+                    <label for="phone">Phone</label>
+                    <input type="tel" id="phone" name="phone" placeholder="xxx-xxx-xxxx">
+
+                    <label for="plan">Plan</label>
+                    <select id="plan" name="plan">
+                        <option value="">Choose a plan</option>
+                        <option value="Starter Box">Starter Box</option>
+                        <option value="Balance Box">Balance Box</option>
+                        <option value="Performance Box">Performance Box</option>
+                    </select>
+
+                    <label>Delivery Day</label>
+                    <div class="rowGroup">
+                        <label><input type="radio" name="deliveryDay" value="Monday"> Monday</label>
+                        <label><input type="radio" name="deliveryDay" value="Wednesday"> Wednesday</label>
+                        <label><input type="radio" name="deliveryDay" value="Friday"> Friday</label>
+                    </div>
+
+                    <label for="notes">Food Notes</label>
+                    <textarea id="notes" name="notes" placeholder="Allergies, dislikes, or goals"></textarea>
+                </div>
+
+                <div class="buttonRow">
+                    <button type="submit">Submit Enrollment</button>
+                    <button class="secondary" type="reset">Clear Form</button>
+                </div>
+            </form>
+
+            <div id="summaryBox" class="summaryBox"></div>
+        </section>
+    </div>
+
+    <div class="footer">
+        <a href="index.html"><img src="../pictures/freshlogo_s.png" alt="FreshBite logo"></a>
+        <a href="index.html">Back to Home</a>
+    </div>
+
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById("menu");
+            var currentVisibility = window.getComputedStyle(menu).visibility;
+            menu.style.visibility = currentVisibility === "hidden" ? "visible" : "hidden";
+        }
+
+        var deliveryMessages = {
+            "Monday": "Start your week strong.",
+            "Wednesday": "Midweek refuel is locked in.",
+            "Friday": "Weekend prep made easy."
+        };
+
+        function Enrollment(name, email, plan, day) {
+            this.name = name;
+            this.email = email;
+            this.plan = plan;
+            this.day = day;
+        }
+
+        Enrollment.prototype.summary = function () {
+            return this.name + " selected the " + this.plan + " with " + this.day + " delivery.";
+        };
+
+        function getSelectedDay() {
+            var dayRadio = document.querySelector("input[name='deliveryDay']:checked");
+            return dayRadio ? dayRadio.value : "";
+        }
+
+        function validateForm() {
+            var fullName = document.getElementById("fullName").value.trim();
+            var email = document.getElementById("email").value.trim();
+            var phone = document.getElementById("phone").value.trim();
+            var plan = document.getElementById("plan").value;
+            var day = getSelectedDay();
+            var errorMessages = [];
+
+            if (fullName.length < 2) {
+                errorMessages.push("Please enter your full name.");
+            }
+
+            if (!email.includes("@") || !email.includes(".")) {
+                errorMessages.push("Please provide a valid email address.");
+            }
+
+            if (phone.length < 10) {
+                errorMessages.push("Please provide a valid phone number.");
+            }
+
+            if (!plan) {
+                errorMessages.push("Please choose a meal plan.");
+            }
+
+            if (!day) {
+                errorMessages.push("Please select a delivery day.");
+            }
+
+            return errorMessages;
+        }
+
+        document.getElementById("enrollForm").addEventListener("submit", function (event) {
+            event.preventDefault();
+            var errors = validateForm();
+            var errorBox = document.getElementById("errorBox");
+            var summaryBox = document.getElementById("summaryBox");
+
+            if (errors.length > 0) {
+                errorBox.style.display = "block";
+                errorBox.innerHTML = errors.join("<br>");
+                summaryBox.style.display = "none";
+                return;
+            }
+
+            errorBox.style.display = "none";
+
+            var customer = new Enrollment(
+                document.getElementById("fullName").value.trim(),
+                document.getElementById("email").value.trim(),
+                document.getElementById("plan").value,
+                getSelectedDay()
+            );
+
+            summaryBox.style.display = "block";
+            summaryBox.innerHTML = "<strong>Enrollment Preview:</strong> " + customer.summary() + " " + deliveryMessages[customer.day];
+
+            alert("Thank you for enrolling with FreshBite! Our team will contact you soon.");
+            document.getElementById("enrollForm").reset();
+        });
+    </script>
+</body>
+</html>
