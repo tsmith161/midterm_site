@@ -4,8 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="keywords" content="meal delivery enrollment, FreshBite signup, meal prep subscription form">
-    <title>FreshBite Enrollment</title>
+    <meta name="description" content="Enroll in FreshBite Meal Prep and start receiving fresh, healthy meals delivered to your door.">
+    <title>Enroll - FreshBite Meal Prep</title>
     <link rel="stylesheet" href="../stylesheets/header.css">
+    <link rel="stylesheet" href="../stylesheets/pages.css">
     <style>
         .contentWrap {
             width: min(900px, 92%);
@@ -14,9 +16,9 @@
         }
 
         .formCard {
-            background-color: rgba(255, 255, 255, 0.94);
-            border: 2px solid #2E7D32;
-            border-radius: 12px;
+            background-color: #fff3e0;
+            border: 2px solid #ff9800;
+            border-radius: 15px;
             padding: 20px;
             margin-bottom: 24px;
         }
@@ -24,7 +26,7 @@
         .formCard h2 {
             margin-top: 0;
             margin-bottom: 6px;
-            color: #1B5E20;
+            color: #2E7D32;
         }
 
         .formGrid {
@@ -98,13 +100,19 @@
         }
 
         .buttonRow button {
-            background-color: #2E7D32;
+            background-color: #FF9800;
             color: #fff;
             border: none;
-            border-radius: 8px;
-            padding: 10px 16px;
+            border-radius: 10px;
+            padding: 12px 24px;
             cursor: pointer;
             font-weight: bold;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+
+        .buttonRow button:hover {
+            background-color: #e68a00;
         }
 
         .buttonRow .secondary {
@@ -212,18 +220,15 @@
         </section>
     </div>
 
-    <div class="footer">
-        <a href="index.html"><img src="../pictures/freshlogo_s.png" alt="FreshBite logo"></a>
-        <a href="index.html">Back to Home</a>
-    </div>
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="footer-content">
+            <a href="index.html"><img src="../pictures/freshlogo_s.png" class="footer-logo" alt="FreshBite Logo"></a>
+            <p>&copy; 2025 FreshBite Meal Prep. All rights reserved.</p>
+        </div>
+    </footer>
 
     <script>
-        function toggleMenu() {
-            var menu = document.getElementById("menu");
-            var currentVisibility = window.getComputedStyle(menu).visibility;
-            menu.style.visibility = currentVisibility === "hidden" ? "visible" : "hidden";
-        }
-
         var deliveryMessages = {
             "Monday": "Start your week strong.",
             "Wednesday": "Midweek refuel is locked in.",

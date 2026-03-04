@@ -5,7 +5,13 @@
     "tagline": "Simple meals for busy weekdays",
     "weeklyPrice": 59,
     "mealsPerWeek": 6,
-    "description": "Balanced dinners prepped fresh and ready in under 5 minutes."
+    "description": "Balanced dinners prepped fresh and ready in under 5 minutes.",
+    "features": [
+      "6 chef-prepared meals per week",
+      "Free delivery on orders over $50",
+      "Skip or cancel anytime",
+      "Eco-friendly packaging"
+    ]
   },
   {
     "id": "balance",
@@ -13,7 +19,14 @@
     "tagline": "Our most popular plan",
     "weeklyPrice": 89,
     "mealsPerWeek": 10,
-    "description": "A mix of high-protein, low-carb, and family-style options."
+    "description": "A mix of high-protein, low-carb, and family-style options.",
+    "features": [
+      "10 chef-prepared meals per week",
+      "Free delivery included",
+      "Customize your menu weekly",
+      "Priority customer support",
+      "Skip or cancel anytime"
+    ]
   },
   {
     "id": "performance",
@@ -21,6 +34,14 @@
     "tagline": "Fuel for active lifestyles",
     "weeklyPrice": 119,
     "mealsPerWeek": 14,
-    "description": "High-protein meals designed for training, recovery, and consistency."
+    "description": "High-protein meals designed for training, recovery, and consistency.",
+    "features": [
+      "14 chef-prepared meals per week",
+      "Free express delivery",
+      "Macro-balanced for performance",
+      "Customize every meal",
+      "Dedicated nutrition support",
+      "Skip or cancel anytime"
+    ]
   }
 ]

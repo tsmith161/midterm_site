@@ -1,52 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="FreshBite, meal prep, meal delivery, healthy food, subscription, fresh meals, home delivery">
+    <meta name="description" content="FreshBite Meal Prep - Chef-prepared healthy meals delivered fresh to your door.">
+    <title>Welcome - FreshBite Meal Prep</title>
     <link rel="stylesheet" href="../stylesheets/header.css">
     <link rel="stylesheet" href="../stylesheets/pages.css">
-    <title>Welcome - FreshBite</title>
     <style>
         .hero {
             margin: 0 auto;
-
             height: 470px;
-            width: 700px;
-
+            width: 100%;
+            max-width: 700px;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
-
-            border-radius: 50px;
-
+            border-radius: 20px;
             background-image: url("../pictures/backgroundHero2.jpg");
+            background-size: cover;
+            background-position: center;
         }
 
         .hero h2 {
             color: white;
-            text-shadow: -2px -2px 0 black,
-                2px -2px 0 black,
-                -2px 2px 0 black,
-                2px 2px 0 black;
+            text-shadow: -2px -2px 0 black, 2px -2px 0 black, -2px 2px 0 black, 2px 2px 0 black;
             font-size: 32px;
+            text-align: center;
+            padding: 0 20px;
         }
 
         .hero p {
             color: white;
-            text-shadow: -1px -1px 0 black,
-                1px -1px 0 black,
-                -1px 1px 0 black,
-                1px 1px 0 black;
-            
+            text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
         }
-        
+
         .hero button {
-            background-color: green;
+            background-color: #FF9800;
             color: white;
-
             margin-top: 20px;
-            border-radius: 25px;
-            width: 80%;
-            height: 100%;
+            border-radius: 10px;
+            border: none;
+            padding: 14px 40px;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
 
-            font-size: 24pt;
+        .hero button:hover {
+            background-color: #e68a00;
         }
 
         .benefits-section {
@@ -65,11 +70,22 @@
           padding: 20px;
           width: 100%;
           background-color: #fff3e0;
+          box-sizing: border-box;
+        }
+
+        .benefits-box h2 {
+          color: #2E7D32;
+          margin-top: 0;
         }
 
         .benefits-box ul {
           list-style-type: disc;
           margin-left: 20px;
+        }
+
+        .benefits-box li {
+          margin-bottom: 8px;
+          line-height: 1.5;
         }
 
         .testimonial-box {
@@ -79,13 +95,41 @@
           width: 100%;
           background-color: #fff3e0;
           text-align: center;
+          box-sizing: border-box;
+        }
+
+        .testimonial-box h3 {
+          color: #2E7D32;
+        }
+
+        @media (max-width: 700px) {
+            .hero {
+                height: 350px;
+                border-radius: 15px;
+                margin: 0 10px;
+            }
+            .hero h2 {
+                font-size: 24px;
+            }
+        }
+
+        @media (max-width: 400px) {
+            .hero {
+                height: 280px;
+            }
+            .hero h2 {
+                font-size: 18px;
+            }
+            .hero p {
+                font-size: 13px;
+            }
         }
     </style>
 </head>
 <body>
-    <!-- Beginning of Standard Hearder -->
+    <!-- Beginning of Standard Header -->
     <div class="header">
-        <a href = "index.html"><img src="../pictures/freshlogo_s.png"></a>
+        <a href="index.html"><img src="../pictures/freshlogo_s.png"></a>
         <div class="brandBox">
             <h1>FreshBite&copy; Meal Prep</h1>
             <p>Eating Healthy has never been easier</p>
@@ -96,21 +140,19 @@
             <span></span>
         </button>
     </div>
-    <div style="height:150px">
-
-    </div>
-    <div class="menu" id = "menu">
-        <a href = "index.html"><h2>Home</h2></a>
-        <a href = "about.html"><h2>About Us</h2></a>
-        <a href = "testimony.html"><h2>Testimonies</h2></a>
-        <a href = "faq.html"><h2>FAQ</h2></a>
-        <a href = "howitworks.html"><h2>How It Works</h2></a>
-        <a href = "contact.html"><h2>Contact</h2></a>
-        <a href = "pricing.html"><h2>Pricing</h2></a>
-        <a href = "enrollment_form.html"><h2>Enroll</h2></a>
+    <div style="height:150px"></div>
+    <div class="menu" id="menu">
+        <a href="index.html"><h2>Home</h2></a>
+        <a href="about.html"><h2>About Us</h2></a>
+        <a href="testimony.html"><h2>Testimonies</h2></a>
+        <a href="faq.html"><h2>FAQ</h2></a>
+        <a href="howitworks.html"><h2>How It Works</h2></a>
+        <a href="contact.html"><h2>Contact</h2></a>
+        <a href="pricing.html"><h2>Pricing</h2></a>
+        <a href="enrollment_form.html"><h2>Enroll</h2></a>
     </div>
 
-    <div style="height:40"></div>
+    <div style="height:40px"></div>
 
     <script>
         function toggleMenu() {
@@ -121,14 +163,13 @@
             }
         }
     </script>
-
     <!-- End of Standard Header -->
 
-     <div class="hero">
+    <div class="hero">
         <h2>Healthy Meals Delivered to Your Door</h2>
         <p>Chef-prepared meals customized to your lifestyle</p>
-        <a href="enrollment_form.html"><button>Start your Plan!</button></a>
-     </div>
+        <a href="enrollment_form.html"><button>Start Your Plan</button></a>
+    </div>
 
     <div class="benefits-section">
         <div class="benefits-box">
@@ -142,8 +183,8 @@
         </div>
 
         <div class="testimonial-box">
-          <h3>Don’t just take it from us – hear from our customers</h3>
-          <p id="testimonial">"This service has completely changed my week!" – Alex</p>
+          <h3>Don't just take it from us - hear from our customers</h3>
+          <p>"This service has completely changed my week!" - Alex</p>
         </div>
     </div>
 
@@ -155,3 +196,4 @@
         </div>
     </footer>
 </body>
+</html>

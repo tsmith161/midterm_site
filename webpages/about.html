@@ -1,36 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="FreshBite, about us, meal prep, our story, our mission, healthy food company">
+    <meta name="description" content="Learn about FreshBite Meal Prep - our mission, story, and team.">
+    <title>About Us - FreshBite Meal Prep</title>
     <link rel="stylesheet" href="../stylesheets/header.css">
     <link rel="stylesheet" href="../stylesheets/pages.css">
-    <title>About - FreshBite</title>
     <style>
-        .leftBox {
-            left: 0px;
-            border: 2px solid #ff9800;
-            border-radius: 15px;
+        .about-container {
+            max-width: 800px;
+            margin: 0 auto;
             padding: 20px;
-            background-color: #fff3e0;
-            text-align: left;
-
-            width: 60%;
-            margin-bottom: 20px;
         }
-        .rightBox {
-            margin-left: 35%;
+
+        .about-section {
             border: 2px solid #ff9800;
             border-radius: 15px;
-            padding: 20px;
+            padding: 25px;
             background-color: #fff3e0;
-            text-align: right;
+            margin-bottom: 25px;
+        }
 
-            width: 60%;
-            margin-bottom: 20px;
+        .about-section h2 {
+            color: #2E7D32;
+            margin-top: 0;
+        }
+
+        .about-section p {
+            color: #444;
+            line-height: 1.6;
+        }
+
+        .about-section ul {
+            padding-left: 20px;
+        }
+
+        .about-section li {
+            margin-bottom: 8px;
+            color: #444;
+            line-height: 1.5;
+        }
+
+        .team-grid {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 15px;
+        }
+
+        .team-member {
+            text-align: center;
+            flex: 1;
+            min-width: 150px;
+            max-width: 200px;
+            padding: 15px;
+            background-color: white;
+            border-radius: 10px;
+            border: 1px solid #ffcc80;
+        }
+
+        .team-member p {
+            font-weight: bold;
+            color: #2E7D32 !important;
+            margin: 5px 0 0 0;
+        }
+
+        .team-member span {
+            font-size: 40px;
+        }
+
+        @media (max-width: 500px) {
+            .team-grid {
+                flex-direction: column;
+                align-items: center;
+            }
         }
     </style>
 </head>
 <body>
-    <!-- Beginning of Standard Hearder -->
+    <!-- Beginning of Standard Header -->
     <div class="header">
-        <a href = "index.html"><img src="../pictures/freshlogo_s.png"></a>
+        <a href="index.html"><img src="../pictures/freshlogo_s.png"></a>
         <div class="brandBox">
             <h1>FreshBite&copy; Meal Prep</h1>
             <p>Eating Healthy has never been easier</p>
@@ -41,21 +94,19 @@
             <span></span>
         </button>
     </div>
-    <div style="height:150px">
-
-    </div>
-    <div class="menu" id = "menu">
-        <a href = "index.html"><h2>Home</h2></a>
-        <a href = "about.html"><h2>About Us</h2></a>
-        <a href = "testimony.html"><h2>Testimonies</h2></a>
-        <a href = "faq.html"><h2>FAQ</h2></a>
-        <a href = "howitworks.html"><h2>How It Works</h2></a>
-        <a href = "contact.html"><h2>Contact</h2></a>
-        <a href = "pricing.html"><h2>Pricing</h2></a>
-        <a href = "enrollment_form.html"><h2>Enroll</h2></a>
+    <div style="height:150px"></div>
+    <div class="menu" id="menu">
+        <a href="index.html"><h2>Home</h2></a>
+        <a href="about.html"><h2>About Us</h2></a>
+        <a href="testimony.html"><h2>Testimonies</h2></a>
+        <a href="faq.html"><h2>FAQ</h2></a>
+        <a href="howitworks.html"><h2>How It Works</h2></a>
+        <a href="contact.html"><h2>Contact</h2></a>
+        <a href="pricing.html"><h2>Pricing</h2></a>
+        <a href="enrollment_form.html"><h2>Enroll</h2></a>
     </div>
 
-    <div style="height:40"></div>
+    <div style="height:40px"></div>
 
     <script>
         function toggleMenu() {
@@ -66,77 +117,63 @@
             }
         }
     </script>
-
     <!-- End of Standard Header -->
 
-    <div class="leftBox">
-        <h2>Why We Exist</h2>
-        <p>At FreshBite Meal Prep, our purpose is simple: to make healthy eating easy, affordable, 
-            and stress-free. We know life gets busy. Between school, work, workouts, and everything 
-            else, cooking nutritious meals every day isn’t always realistic. That’s why we created a 
-            service that delivers fresh, balanced meals straight to your door — ready to heat and enjoy. <br><br>
-            We believe everyone deserves access to:
-        </p>
-        <ul>
-            <li>
-                <p>🍎 Fresh, high-quality ingredients</p>
-            </li>
-            <li>
-                <p>🥩 Balanced nutrition</p>
-            </li>
-            <li>
-                <p>⏰ Time saved every week</p>
-            </li>
-            <li>
-                <p>💚 A healthier lifestyle</p>
-            </li>
-        </ul>
+    <div class="about-container">
+        <h2 class="page-title">About Us</h2>
 
-        <p>Healthy eating shouldn’t feel complicated. We make it simple.</p>
-    </div>
-    <div class="rightBox">
-        <h2>Our Mission</h2>
-        <p>
-            Our mission is to simplify healthy living by delivering fresh, chef-crafted meals that save time, fuel performance, and help people feel their best — every single day.
-        </p>
-    </div>
-    <div class="leftBox">
-        <h2>Our Story</h2>
-        <p>
-            FreshBite started with one simple problem: we were tired of choosing between fast food and spending hours cooking. <br><br>
+        <div class="about-section">
+            <h2>Why We Exist</h2>
+            <p>At FreshBite Meal Prep, our purpose is simple: to make healthy eating easy, affordable,
+                and stress-free. We know life gets busy. Between school, work, workouts, and everything
+                else, cooking nutritious meals every day isn't always realistic. That's why we created a
+                service that delivers fresh, balanced meals straight to your door — ready to heat and enjoy.</p>
+            <p>We believe everyone deserves access to:</p>
+            <ul>
+                <li>Fresh, high-quality ingredients</li>
+                <li>Balanced nutrition</li>
+                <li>Time saved every week</li>
+                <li>A healthier lifestyle</li>
+            </ul>
+            <p>Healthy eating shouldn't feel complicated. We make it simple.</p>
+        </div>
 
-            As students and busy professionals, we wanted meals that were:
-        </p>
-        <ul>
-            <li>
-                Nutritious
-            </li>
-            <li>
-                Convenient
-            </li>
-            <li>
-                Actually delicious
-            </li>
-        </ul>
-        <p>
-            So we started prepping our own weekly meals — and friends quickly asked if we could make theirs too. What began as cooking in a small kitchen turned into a growing passion for helping others eat better without sacrificing time. <br><br>
+        <div class="about-section">
+            <h2>Our Mission</h2>
+            <p>Our mission is to simplify healthy living by delivering fresh, chef-crafted meals that save time, fuel performance, and help people feel their best — every single day.</p>
+        </div>
 
-            Today, FreshBite serves our community with carefully prepared meals made from fresh ingredients, designed to support fitness goals, busy schedules, and healthier habits. <br><br>
+        <div class="about-section">
+            <h2>Our Story</h2>
+            <p>FreshBite started with one simple problem: we were tired of choosing between fast food and spending hours cooking.</p>
+            <p>As students and busy professionals, we wanted meals that were:</p>
+            <ul>
+                <li>Nutritious</li>
+                <li>Convenient</li>
+                <li>Actually delicious</li>
+            </ul>
+            <p>So we started prepping our own weekly meals — and friends quickly asked if we could make theirs too. What began as cooking in a small kitchen turned into a growing passion for helping others eat better without sacrificing time.</p>
+            <p>Today, FreshBite serves our community with carefully prepared meals made from fresh ingredients, designed to support fitness goals, busy schedules, and healthier habits.</p>
+            <p>And we're just getting started.</p>
+        </div>
 
-            And we’re just getting started.
-        </p>
-    </div>
-    <div class="rightbox">
-        <h2>Meet Our Team</h2>
-        <p>
-            TJ Smith
-        </p>
-        <p>
-            Tony Nyugen
-        </p>
-        <p>
-            Armaan Thadani
-        </p>
+        <div class="about-section">
+            <h2>Meet Our Team</h2>
+            <div class="team-grid">
+                <div class="team-member">
+                    <span>👨‍💼</span>
+                    <p>TJ Smith</p>
+                </div>
+                <div class="team-member">
+                    <span>👨‍💻</span>
+                    <p>Tony Nguyen</p>
+                </div>
+                <div class="team-member">
+                    <span>👨‍🍳</span>
+                    <p>Armaan Thadani</p>
+                </div>
+            </div>
+        </div>
     </div>
 
     <!-- Footer -->
@@ -147,3 +184,4 @@
         </div>
     </footer>
 </body>
+</html>

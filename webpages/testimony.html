@@ -1,25 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="FreshBite, testimonials, reviews, customer stories, meal prep reviews">
+    <meta name="description" content="Hear from real FreshBite Meal Prep customers about their experience.">
+    <title>Testimonies - FreshBite Meal Prep</title>
     <link rel="stylesheet" href="../stylesheets/header.css">
     <link rel="stylesheet" href="../stylesheets/pages.css">
-    <title>Hear from FreshBiters - Freshbit</title>
     <style>
-        .box {
-            margin-left: 20%;
+        .testimonials-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .testimonial-card {
             border: 2px solid #ff9800;
             border-radius: 15px;
-            padding: 20px;
+            padding: 25px;
             background-color: #fff3e0;
             text-align: center;
-
-            width: 60%;
             margin-bottom: 20px;
+        }
+
+        .testimonial-card .name {
+            font-weight: bold;
+            color: #2E7D32;
+            font-size: 18px;
+            margin-bottom: 2px;
+        }
+
+        .testimonial-card .title {
+            color: #FF9800;
+            font-size: 14px;
+            margin-bottom: 8px;
+        }
+
+        .testimonial-card .rating {
+            color: #FF9800;
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+
+        .testimonial-card .quote {
+            color: #444;
+            font-style: italic;
+            line-height: 1.6;
+            font-size: 16px;
         }
     </style>
 </head>
 <body>
     <!-- Beginning of Standard Header -->
     <div class="header">
-        <a href = "index.html"><img src="../pictures/freshlogo_s.png"></a>
+        <a href="index.html"><img src="../pictures/freshlogo_s.png"></a>
         <div class="brandBox">
             <h1>FreshBite&copy; Meal Prep</h1>
             <p>Eating Healthy has never been easier</p>
@@ -30,62 +65,21 @@
             <span></span>
         </button>
     </div>
-    <div style="height:150px">
-
-    </div>
-    <div class="menu" id = "menu">
-        <a href = "index.html"><h2>Home</h2></a>
-        <a href = "about.html"><h2>About Us</h2></a>
-        <a href = "testimony.html"><h2>Testimonies</h2></a>
-        <a href = "faq.html"><h2>FAQ</h2></a>
-        <a href = "howitworks.html"><h2>How It Works</h2></a>
-        <a href = "contact.html"><h2>Contact</h2></a>
-        <a href = "pricing.html"><h2>Pricing</h2></a>
-        <a href = "enrollment_form.html"><h2>Enroll</h2></a>
+    <div style="height:150px"></div>
+    <div class="menu" id="menu">
+        <a href="index.html"><h2>Home</h2></a>
+        <a href="about.html"><h2>About Us</h2></a>
+        <a href="testimony.html"><h2>Testimonies</h2></a>
+        <a href="faq.html"><h2>FAQ</h2></a>
+        <a href="howitworks.html"><h2>How It Works</h2></a>
+        <a href="contact.html"><h2>Contact</h2></a>
+        <a href="pricing.html"><h2>Pricing</h2></a>
+        <a href="enrollment_form.html"><h2>Enroll</h2></a>
     </div>
 
-    <div style="height:40"></div>
-    <!-- End of Standard Header -->
+    <div style="height:40px"></div>
 
     <script>
-        testimonials = {
-            "Alex": {
-                "title": "College Student", 
-                "testimony": "This service has completely changed my week!",
-                "rating": "5/5"
-            },
-
-            "Sarah": {
-                "title": "College Student",
-                "testimony": "FreshBite completely changed my routine. Between classes and work, I barely had time to cook. Now I have healthy meals ready in minutes. It’s honestly a lifesaver.",
-                "rating": "5/5"
-            },
-
-            "Marcus": {
-                "title": "Fitness Enthusiast",
-                "testimony": "The portion sizes are perfect for my training goals. I’ve gained muscle while staying lean, and I don’t have to worry about tracking every ingredient. FreshBite makes it simple.",
-                "rating": "5/5"
-            },
-
-            "Danielle": {
-                "title": "Busy Professional",
-                "testimony": "I used to order takeout almost every night. Since switching to FreshBite, I feel healthier, more energized, and I’m actually saving money.",
-                "rating": "5/5"
-            },
-
-            "Kevin": {
-                "title": "Parent",
-                "testimony": "As a parent, time is everything. FreshBite helps me feed my family nutritious meals without spending hours in the kitchen. The kids even love it!",
-                "rating": "5/5"
-            },
-
-            "Emily": {
-                "title": "First-Time Subscriber",
-                "testimony": "I was skeptical at first, but the quality impressed me right away. The ingredients taste fresh, and every meal feels homemade.",
-                "rating": "5/5"
-            }
-        }
-
         function toggleMenu() {
             if (document.getElementById("menu").style.visibility == "hidden") {
                 document.getElementById("menu").style.visibility = "visible";
@@ -93,21 +87,17 @@
                 document.getElementById("menu").style.visibility = "hidden";
             }
         }
-
-        function loadTestimonials() {
-            Object.entries(testimonials).forEach(function([name, info]) {
-                let str = "<div class='box'>";
-                str += "<p>Name: " + name +"</p>";
-                str += "<p>Occupation: " + info["title"] +"</p>";
-                str += "<p>Rating: " + info["rating"] +"</p>";
-                str += "<h3>" + info["testimony"] + "</h3>";
-                str += "</div>";
-                document.write(str);
-            });
-        }
-
-        loadTestimonials();
     </script>
+    <!-- End of Standard Header -->
+
+    <div class="testimonials-container">
+        <h2 class="page-title">What Our Customers Say</h2>
+        <p class="page-subtitle">Real stories from real FreshBite subscribers.</p>
+
+        <div id="testimonials-list">
+            <!-- Testimonials will be built dynamically by JavaScript -->
+        </div>
+    </div>
 
     <!-- Footer -->
     <footer class="site-footer">
@@ -116,4 +106,76 @@
             <p>&copy; 2025 FreshBite Meal Prep. All rights reserved.</p>
         </div>
     </footer>
+
+    <script>
+        /*
+         * Testimonials - uses an associative array (JS object)
+         * and DOM manipulation to construct the page
+         */
+        var testimonials = {
+            "Alex": {
+                "title": "College Student",
+                "testimony": "This service has completely changed my week!",
+                "rating": "5/5"
+            },
+            "Sarah": {
+                "title": "College Student",
+                "testimony": "FreshBite completely changed my routine. Between classes and work, I barely had time to cook. Now I have healthy meals ready in minutes. It's honestly a lifesaver.",
+                "rating": "5/5"
+            },
+            "Marcus": {
+                "title": "Fitness Enthusiast",
+                "testimony": "The portion sizes are perfect for my training goals. I've gained muscle while staying lean, and I don't have to worry about tracking every ingredient. FreshBite makes it simple.",
+                "rating": "5/5"
+            },
+            "Danielle": {
+                "title": "Busy Professional",
+                "testimony": "I used to order takeout almost every night. Since switching to FreshBite, I feel healthier, more energized, and I'm actually saving money.",
+                "rating": "5/5"
+            },
+            "Kevin": {
+                "title": "Parent",
+                "testimony": "As a parent, time is everything. FreshBite helps me feed my family nutritious meals without spending hours in the kitchen. The kids even love it!",
+                "rating": "5/5"
+            },
+            "Emily": {
+                "title": "First-Time Subscriber",
+                "testimony": "I was skeptical at first, but the quality impressed me right away. The ingredients taste fresh, and every meal feels homemade.",
+                "rating": "5/5"
+            }
+        };
+
+        function loadTestimonials() {
+            var container = document.getElementById("testimonials-list");
+            Object.entries(testimonials).forEach(function([name, info]) {
+                var card = document.createElement("div");
+                card.className = "testimonial-card";
+
+                var nameEl = document.createElement("p");
+                nameEl.className = "name";
+                nameEl.textContent = name;
+
+                var titleEl = document.createElement("p");
+                titleEl.className = "title";
+                titleEl.textContent = info.title;
+
+                var ratingEl = document.createElement("p");
+                ratingEl.className = "rating";
+                ratingEl.textContent = "\u2B50 " + info.rating;
+
+                var quoteEl = document.createElement("h3");
+                quoteEl.className = "quote";
+                quoteEl.textContent = '"' + info.testimony + '"';
+
+                card.appendChild(nameEl);
+                card.appendChild(titleEl);
+                card.appendChild(ratingEl);
+                card.appendChild(quoteEl);
+                container.appendChild(card);
+            });
+        }
+
+        loadTestimonials();
+    </script>
 </body>
+</html>
