@@ -2,24 +2,39 @@
     <link rel="stylesheet" href="../stylesheets/header.css">
     <style>
         .hero {
-            width: 80%;
-            height: 200px;
-            margin-left: 10%;
-            margin-right: 10%;
+            margin: 0 auto;
+
+            height: 470px;
+            width: 700px;
 
             display: flex;
             flex-direction: column;
             align-items: center;
+            justify-content: center;
 
-            background-color: darkgreen;
-            border-radius: 15px;
-            border-color: darkgreen;
+            background-image: url("../pictures/backgroundHero2.jpg");
         }
 
         .hero h2 {
-            border-radius: 15px;
-            background-color:rgb(1, 128, 1);
+            color: white;
+            text-shadow: -2px -2px 0 black,
+                2px -2px 0 black,
+                -2px 2px 0 black,
+                2px 2px 0 black;
+            font-size: 32px;
+        }
 
+        .hero p {
+            color: white;
+            text-shadow: -1px -1px 0 black,
+                1px -1px 0 black,
+                -1px 1px 0 black,
+                1px 1px 0 black;
+            
+        }
+        
+        .hero button {
+            background-color: green;
             color: white;
         }
     </style>
@@ -58,10 +73,9 @@
     </script>
 
     <!-- End of Standard Header -->
-
-    <div class="hero">
+     <div class="hero">
         <h2>Healthy Meals Delivered to Your Door</h2>
-        <p>Chef-prepared meals customized to your lifestyle — ready when you are.</p>
-        <a href="plans.html" class="cta-button">Start Your Plan</a>
-    </div>
+        <p>Chef-prepared meals customized to your lifestyle</p>
+        <a href="about.html"><button>Start your Plan</button></a>
+     </div>
 </body>
