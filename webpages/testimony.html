@@ -1,8 +1,21 @@
 <head>
     <link rel="stylesheet" href="../stylesheets/header.css">
+    <style>
+        .box {
+            margin-left: 20%;
+            border: 2px solid #ff9800;
+            border-radius: 15px;
+            padding: 20px;
+            background-color: #fff3e0;
+            text-align: center;
+
+            width: 60%;
+            margin-bottom: 20px;
+        }
+    </style>
 </head>
 <body>
-    <!-- Beginning of Standard Hearder -->
+    <!-- Beginning of Standard Header -->
     <div class="header">
         <a href = "index.html"><img src="../pictures/freshlogo_s.png"></a>
         <div class="brandBox">
@@ -27,8 +40,47 @@
     </div>
 
     <div style="height:40"></div>
+    <!-- End of Standard Header -->
 
     <script>
+        testimonials = {
+            "Alex": {
+                "title": "College Student", 
+                "testimony": "This service has completely changed my week!",
+                "rating": "5/5"
+            },
+
+            "Sarah": {
+                "title": "College Student",
+                "testimony": "FreshBite completely changed my routine. Between classes and work, I barely had time to cook. Now I have healthy meals ready in minutes. It’s honestly a lifesaver.",
+                "rating": "5/5"
+            },
+
+            "Marcus": {
+                "title": "Fitness Enthusiast",
+                "testimony": "The portion sizes are perfect for my training goals. I’ve gained muscle while staying lean, and I don’t have to worry about tracking every ingredient. FreshBite makes it simple.",
+                "rating": "5/5"
+            },
+
+            "Danielle": {
+                "title": "Busy Professional",
+                "testimony": "I used to order takeout almost every night. Since switching to FreshBite, I feel healthier, more energized, and I’m actually saving money.",
+                "rating": "5/5"
+            },
+
+            "Kevin": {
+                "title": "Parent",
+                "testimony": "As a parent, time is everything. FreshBite helps me feed my family nutritious meals without spending hours in the kitchen. The kids even love it!",
+                "rating": "5/5"
+            },
+
+            "Emily": {
+                "title": "First-Time Subscriber",
+                "testimony": "I was skeptical at first, but the quality impressed me right away. The ingredients taste fresh, and every meal feels homemade.",
+                "rating": "5/5"
+            }
+        }
+
         function toggleMenu() {
             if (document.getElementById("menu").style.visibility == "hidden") {
                 document.getElementById("menu").style.visibility = "visible";
@@ -36,7 +88,23 @@
                 document.getElementById("menu").style.visibility = "hidden";
             }
         }
-    </script>
 
-    <!-- End of Standard Header -->
+        function loadTestimonials() {
+            Object.entries(testimonials).forEach(function([name, info]) {
+                let str = "<div class='box'>";
+                str += "<p>Name: " + name +"</p>";
+                str += "<p>Occupation: " + info["title"] +"</p>";
+                str += "<p>Rating: " + info["rating"] +"</p>";
+                str += "<h3>" + info["testimony"] + "</h3>";
+                str += "</div>";
+                document.write(str);
+            });
+        }
+
+        loadTestimonials();
+    </script>
+    <div class="footer">
+        <a href="index.html"><img src="../pictures/freshlogo_s.png" alt="FreshBite logo"></a>
+        <a href="index.html">Back to Home</a>
+    </div>
 </body>
