@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="FreshBite, meal prep, FAQ, questions, meal delivery, healthy food, subscription">
+    <meta name="description" content="Frequently asked questions about FreshBite Meal Prep service.">
+    <title>FAQ - FreshBite Meal Prep</title>
+    <link rel="stylesheet" href="../stylesheets/header.css">
+    <link rel="stylesheet" href="../stylesheets/pages.css">
+</head>
+<body>
+    <!-- Beginning of Standard Header -->
+    <div class="header">
+        <a href="index.html"><img src="../pictures/freshlogo_s.png"></a>
+        <div class="brandBox">
+            <h1>FreshBite&copy; Meal Prep</h1>
+            <p>Eating Healthy has never been easier</p>
+        </div>
+        <button class="hamburger" id="hamburger" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </div>
+    <div style="height:150px"></div>
+    <div class="menu" id="menu">
+        <a href="index.html"><h2>Home</h2></a>
+        <a href="about.html"><h2>About Us</h2></a>
+        <a href="testimony.html"><h2>Testimonies</h2></a>
+        <a href="faq.html"><h2>FAQ</h2></a>
+        <a href="howitworks.html"><h2>How It Works</h2></a>
+        <a href="contact.html"><h2>Contact</h2></a>
+        <a href="pricing.html"><h2>Pricing</h2></a>
+        <a href="enrollment_form.html"><h2>Enroll</h2></a>
+    </div>
+
+    <div style="height:40px"></div>
+
+    <script>
+        function toggleMenu() {
+            if (document.getElementById("menu").style.visibility == "hidden") {
+                document.getElementById("menu").style.visibility = "visible";
+            } else {
+                document.getElementById("menu").style.visibility = "hidden";
+            }
+        }
+    </script>
+    <!-- End of Standard Header -->
+
+    <!-- Page Content -->
+    <div class="page-container">
+        <h2 class="page-title">Frequently Asked Questions</h2>
+        <p class="page-subtitle">Got questions? We've got answers. Click on any question below to learn more.</p>
+
+        <div id="faq-container">
+            <!-- FAQ items will be loaded here dynamically from faq.json -->
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="footer-content">
+            <a href="index.html"><img src="../pictures/freshlogo_s.png" class="footer-logo" alt="FreshBite Logo"></a>
+            <p>&copy; 2025 FreshBite Meal Prep. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        /*
+         * FAQ Page JavaScript
+         * - Fetches FAQ data from an external JSON file
+         * - Uses an array of JS objects to build the page
+         * - Uses DOM manipulation (createElement, appendChild)
+         * - Uses a JS associative array for tracking open/closed state
+         */
+
+        // Associative array to track which FAQ items are expanded
+        var faqState = {};
+
+        // Function to create a single FAQ item element
+        function createFaqItem(faqObj) {
+            // Create the wrapper
+            var item = document.createElement("div");
+            item.className = "faq-item";
+
+            // Create the question button
+            var questionBtn = document.createElement("div");
+            questionBtn.className = "faq-question";
+            questionBtn.innerHTML = '<span class="faq-q-text">' + faqObj.question + '</span><span class="faq-toggle">+</span>';
+
+            // Create the answer div
+            var answerDiv = document.createElement("div");
+            answerDiv.className = "faq-answer";
+            answerDiv.id = "faq-answer-" + faqObj.id;
+
+            var answerP = document.createElement("p");
+            answerP.textContent = faqObj.answer;
+            answerDiv.appendChild(answerP);
+
+            // Initialize state as closed
+            faqState["faq-" + faqObj.id] = false;
+
+            // Click handler to toggle open/close
+            questionBtn.addEventListener("click", function() {
+                var key = "faq-" + faqObj.id;
+                faqState[key] = !faqState[key];
+
+                if (faqState[key]) {
+                    answerDiv.style.maxHeight = answerDiv.scrollHeight + "px";
+                    answerDiv.style.padding = "15px 20px";
+                    questionBtn.querySelector(".faq-toggle").textContent = "−";
+                    questionBtn.classList.add("active");
+                } else {
+                    answerDiv.style.maxHeight = "0";
+                    answerDiv.style.padding = "0 20px";
+                    questionBtn.querySelector(".faq-toggle").textContent = "+";
+                    questionBtn.classList.remove("active");
+                }
+            });
+
+            item.appendChild(questionBtn);
+            item.appendChild(answerDiv);
+            return item;
+        }
+
+        // Function to render all FAQ items from an array of objects
+        function renderFaqs(faqArray) {
+            var container = document.getElementById("faq-container");
+            for (var i = 0; i < faqArray.length; i++) {
+                var faqElement = createFaqItem(faqArray[i]);
+                container.appendChild(faqElement);
+            }
+        }
+
+        // Fetch the FAQ data from external JSON file and build the page
+        fetch("../data/faq.json")
+            .then(function(response) {
+                return response.json();
+            })
+            .then(function(data) {
+                renderFaqs(data.faqs);
+            })
+            .catch(function(error) {
+                console.error("Error loading FAQ data:", error);
+                document.getElementById("faq-container").innerHTML = '<p style="text-align:center;color:#c62828;">Unable to load FAQs. Please try again later.</p>';
+            });
+    </script>
+</body>
+</html>

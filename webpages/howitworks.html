@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="FreshBite, how it works, meal delivery, meal prep, healthy meals, subscription service">
+    <meta name="description" content="Learn how FreshBite Meal Prep works - from choosing your plan to enjoying fresh meals at your door.">
+    <title>How It Works - FreshBite Meal Prep</title>
+    <link rel="stylesheet" href="../stylesheets/header.css">
+    <link rel="stylesheet" href="../stylesheets/pages.css">
+    <!-- Internal style sheet (satisfies requirement for at least one internal style sheet) -->
+    <style>
+        .steps-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            max-width: 900px;
+            margin: 30px auto;
+            padding: 0 20px;
+            box-sizing: border-box;
+        }
+
+        .step-card {
+            border: 2px solid #ff9800;
+            border-radius: 15px;
+            padding: 20px 15px;
+            background-color: #fff3e0;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-sizing: border-box;
+        }
+
+        .step-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        }
+
+        .step-number {
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            line-height: 50px;
+            border-radius: 50%;
+            background-color: #4CAF50;
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .step-icon {
+            font-size: 48px;
+            margin-bottom: 10px;
+        }
+
+        .step-card h3 {
+            color: #2E7D32;
+            margin: 10px 0;
+        }
+
+        .step-card p {
+            color: #555;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        .details-section {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .detail-block {
+            border: 2px solid #ff9800;
+            border-radius: 15px;
+            padding: 25px;
+            background-color: #fff3e0;
+            margin-bottom: 25px;
+        }
+
+        .detail-block h3 {
+            color: #2E7D32;
+            margin-top: 0;
+        }
+
+        .detail-columns {
+            display: flex;
+            gap: 30px;
+            margin-top: 15px;
+        }
+
+        .detail-col {
+            flex: 1;
+        }
+
+        .detail-col h4 {
+            color: #FF9800;
+            margin-bottom: 8px;
+        }
+
+        .detail-col ul {
+            margin: 0;
+            padding-left: 20px;
+        }
+
+        .detail-col li {
+            margin-bottom: 6px;
+            color: #444;
+            line-height: 1.4;
+        }
+
+        .cta-banner {
+            text-align: center;
+            background-image: linear-gradient(to right, #4CAF50, #2E7D32);
+            color: white;
+            padding: 40px 20px;
+            margin: 40px 0 0 0;
+            border-radius: 15px;
+            max-width: 800px;
+            margin: 40px auto;
+        }
+
+        .cta-banner h2 {
+            margin-top: 0;
+            font-family: 'Times New Roman', serif;
+        }
+
+        .cta-banner a {
+            display: inline-block;
+            background-color: #FF9800;
+            color: white;
+            text-decoration: none;
+            padding: 12px 30px;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: bold;
+            margin-top: 10px;
+            transition: background-color 0.3s ease;
+        }
+
+        .cta-banner a:hover {
+            background-color: #e68a00;
+        }
+
+        @media (max-width: 800px) {
+            .steps-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 500px) {
+            .steps-grid {
+                grid-template-columns: 1fr;
+            }
+            .detail-columns {
+                flex-direction: column;
+                gap: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Beginning of Standard Header -->
+    <div class="header">
+        <a href="index.html"><img src="../pictures/freshlogo_s.png"></a>
+        <div class="brandBox">
+            <h1>FreshBite&copy; Meal Prep</h1>
+            <p>Eating Healthy has never been easier</p>
+        </div>
+        <button class="hamburger" id="hamburger" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </div>
+    <div style="height:150px"></div>
+    <div class="menu" id="menu">
+        <a href="index.html"><h2>Home</h2></a>
+        <a href="about.html"><h2>About Us</h2></a>
+        <a href="testimony.html"><h2>Testimonies</h2></a>
+        <a href="faq.html"><h2>FAQ</h2></a>
+        <a href="howitworks.html"><h2>How It Works</h2></a>
+        <a href="contact.html"><h2>Contact</h2></a>
+        <a href="pricing.html"><h2>Pricing</h2></a>
+        <a href="enrollment_form.html"><h2>Enroll</h2></a>
+    </div>
+
+    <div style="height:40px"></div>
+
+    <script>
+        function toggleMenu() {
+            if (document.getElementById("menu").style.visibility == "hidden") {
+                document.getElementById("menu").style.visibility = "visible";
+            } else {
+                document.getElementById("menu").style.visibility = "hidden";
+            }
+        }
+    </script>
+    <!-- End of Standard Header -->
+
+    <!-- Page Content -->
+    <div class="page-container">
+        <h2 class="page-title">How It Works</h2>
+        <p class="page-subtitle">Getting healthy, chef-prepared meals delivered is as easy as 1-2-3-4.</p>
+
+        <!-- Step Cards - Multi-column layout -->
+        <div class="steps-grid">
+            <div class="step-card">
+                <div class="step-icon">📋</div>
+                <div class="step-number">1</div>
+                <h3>Choose Your Plan</h3>
+                <p>Pick the meal plan that matches your goals — whether it's weight loss, muscle gain, or just eating better.</p>
+            </div>
+            <div class="step-card">
+                <div class="step-icon">🍽️</div>
+                <div class="step-number">2</div>
+                <h3>Pick Your Meals</h3>
+                <p>Browse our weekly rotating menu and select the meals you love. Customize for any dietary needs.</p>
+            </div>
+            <div class="step-card">
+                <div class="step-icon">👨‍🍳</div>
+                <div class="step-number">3</div>
+                <h3>We Prepare</h3>
+                <p>Our professional chefs cook your meals fresh using locally sourced, premium ingredients.</p>
+            </div>
+            <div class="step-card">
+                <div class="step-icon">🚚</div>
+                <div class="step-number">4</div>
+                <h3>Delivered to You</h3>
+                <p>Your meals arrive at your door in eco-friendly, insulated packaging — ready to heat and enjoy.</p>
+            </div>
+        </div>
+
+        <!-- Detailed Breakdown -->
+        <div class="details-section">
+            <div class="detail-block">
+                <h3>The Full Process</h3>
+                <ol>
+                    <li><strong>Sign up</strong> — Create your account and tell us about your dietary preferences and goals.</li>
+                    <li><strong>Browse the menu</strong> — Each week, our chefs design a new selection of 20+ meals across all cuisines.</li>
+                    <li><strong>Place your order</strong> — Select your meals by Wednesday at midnight for the following week's delivery.</li>
+                    <li><strong>We cook fresh</strong> — Your meals are prepared on delivery day for maximum freshness and flavor.</li>
+                    <li><strong>Doorstep delivery</strong> — Meals arrive in insulated boxes with ice packs to keep everything at the right temperature.</li>
+                    <li><strong>Heat and enjoy</strong> — Most meals reheat in 3-4 minutes. Some are ready to eat right away!</li>
+                </ol>
+            </div>
+
+            <div class="detail-block">
+                <h3>What Makes Us Different</h3>
+                <!-- Multi-column layout using CSS flexbox -->
+                <div class="detail-columns">
+                    <div class="detail-col">
+                        <h4>Quality Ingredients</h4>
+                        <ul>
+                            <li>Locally sourced produce</li>
+                            <li>Hormone-free proteins</li>
+                            <li>No artificial preservatives</li>
+                            <li>Organic whenever possible</li>
+                        </ul>
+                    </div>
+                    <div class="detail-col">
+                        <h4>Flexibility</h4>
+                        <ul>
+                            <li>Skip weeks anytime</li>
+                            <li>Change plans easily</li>
+                            <li>No long-term commitment</li>
+                            <li>Cancel with no fees</li>
+                        </ul>
+                    </div>
+                    <div class="detail-col">
+                        <h4>Sustainability</h4>
+                        <ul>
+                            <li>Recyclable packaging</li>
+                            <li>Compostable containers</li>
+                            <li>Carbon-neutral delivery</li>
+                            <li>Zero food waste policy</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- CTA Banner -->
+        <div class="cta-banner">
+            <h2>Ready to Start Eating Better?</h2>
+            <p>Join thousands of happy customers who have transformed their eating habits with FreshBite.</p>
+            <a href="enrollment_form.html">Get Started Today</a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="footer-content">
+            <a href="index.html"><img src="../pictures/freshlogo_s.png" class="footer-logo" alt="FreshBite Logo"></a>
+            <p>&copy; 2025 FreshBite Meal Prep. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

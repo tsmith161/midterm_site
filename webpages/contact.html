@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="FreshBite, contact us, customer support, meal prep, get in touch, feedback">
+    <meta name="description" content="Get in touch with FreshBite Meal Prep. We'd love to hear from you!">
+    <title>Contact Us - FreshBite Meal Prep</title>
+    <link rel="stylesheet" href="../stylesheets/header.css">
+    <link rel="stylesheet" href="../stylesheets/pages.css">
+</head>
+<body>
+    <!-- Beginning of Standard Header -->
+    <div class="header">
+        <a href="index.html"><img src="../pictures/freshlogo_s.png"></a>
+        <div class="brandBox">
+            <h1>FreshBite&copy; Meal Prep</h1>
+            <p>Eating Healthy has never been easier</p>
+        </div>
+        <button class="hamburger" id="hamburger" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </div>
+    <div style="height:150px"></div>
+    <div class="menu" id="menu">
+        <a href="index.html"><h2>Home</h2></a>
+        <a href="about.html"><h2>About Us</h2></a>
+        <a href="testimony.html"><h2>Testimonies</h2></a>
+        <a href="faq.html"><h2>FAQ</h2></a>
+        <a href="howitworks.html"><h2>How It Works</h2></a>
+        <a href="contact.html"><h2>Contact</h2></a>
+        <a href="pricing.html"><h2>Pricing</h2></a>
+        <a href="enrollment_form.html"><h2>Enroll</h2></a>
+    </div>
+
+    <div style="height:40px"></div>
+
+    <script>
+        function toggleMenu() {
+            if (document.getElementById("menu").style.visibility == "hidden") {
+                document.getElementById("menu").style.visibility = "visible";
+            } else {
+                document.getElementById("menu").style.visibility = "hidden";
+            }
+        }
+    </script>
+    <!-- End of Standard Header -->
+
+    <!-- Page Content -->
+    <div class="page-container">
+        <h2 class="page-title">Contact Us</h2>
+        <p class="page-subtitle">Have a question, comment, or just want to say hello? We'd love to hear from you!</p>
+
+        <div class="contact-wrapper">
+            <!-- Contact Info -->
+            <div class="contact-info-box">
+                <h3>Get In Touch</h3>
+                <ul class="contact-list">
+                    <li><strong>Email:</strong> support@freshbite.com</li>
+                    <li><strong>Phone:</strong> (555) 123-4567</li>
+                    <li><strong>Hours:</strong> Mon - Fri, 8am - 6pm EST</li>
+                    <li><strong>Address:</strong> 123 Fresh Street, Boston, MA 02101</li>
+                </ul>
+            </div>
+
+            <!-- Contact Form -->
+            <div class="contact-form-box">
+                <h3>Send Us a Message</h3>
+                <form id="contactForm" novalidate>
+                    <div class="form-group">
+                        <label for="fullName">Full Name <span class="required">*</span></label>
+                        <input type="text" id="fullName" name="fullName" placeholder="John Doe">
+                        <span class="error-msg" id="nameError"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email Address <span class="required">*</span></label>
+                        <input type="email" id="email" name="email" placeholder="john@example.com">
+                        <span class="error-msg" id="emailError"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="subject">Subject <span class="required">*</span></label>
+                        <select id="subject" name="subject">
+                            <option value="">-- Select a subject --</option>
+                            <option value="general">General Inquiry</option>
+                            <option value="support">Customer Support</option>
+                            <option value="billing">Billing Question</option>
+                            <option value="feedback">Feedback</option>
+                            <option value="partnership">Partnership Opportunity</option>
+                        </select>
+                        <span class="error-msg" id="subjectError"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label>How did you hear about us?</label>
+                        <div class="radio-group">
+                            <label class="radio-label"><input type="radio" name="source" value="social"> Social Media</label>
+                            <label class="radio-label"><input type="radio" name="source" value="friend"> Friend/Family</label>
+                            <label class="radio-label"><input type="radio" name="source" value="search"> Search Engine</label>
+                            <label class="radio-label"><input type="radio" name="source" value="ad"> Advertisement</label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Message <span class="required">*</span></label>
+                        <textarea id="message" name="message" rows="5" placeholder="Type your message here..."></textarea>
+                        <span class="error-msg" id="messageError"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="newsletter" name="newsletter">
+                            Sign me up for the FreshBite newsletter with weekly recipes and deals
+                        </label>
+                    </div>
+
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Thank You Modal -->
+    <div class="modal-overlay" id="thankYouModal">
+        <div class="modal-content">
+            <h2>Thank You!</h2>
+            <p>Your message has been received. A member of our team will get back to you within 24 hours.</p>
+            <button class="modal-close-btn" onclick="closeModal()">Close</button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="footer-content">
+            <a href="index.html"><img src="../pictures/freshlogo_s.png" class="footer-logo" alt="FreshBite Logo"></a>
+            <p>&copy; 2025 FreshBite Meal Prep. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        /*
+         * Contact Form Validation
+         * - Uses a homegrown FormValidator object
+         * - Uses an associative array to store validation rules
+         * - Uses DOM objects to display error messages
+         * - Pops up a thank you modal on successful validation
+         */
+
+        // Homegrown object: FormValidator
+        function FormValidator(formId) {
+            this.form = document.getElementById(formId);
+            this.errors = {};
+            // Associative array of validation rules
+            this.rules = {
+                "fullName": { required: true, minLength: 2, label: "Full Name" },
+                "email": { required: true, pattern: /^[^\s@]+@[^\s@]+\.[^\s@]+$/, label: "Email" },
+                "subject": { required: true, label: "Subject" },
+                "message": { required: true, minLength: 10, label: "Message" }
+            };
+        }
+
+        // Method: validate a single field
+        FormValidator.prototype.validateField = function(fieldName) {
+            var rule = this.rules[fieldName];
+            if (!rule) return true;
+
+            var field = document.getElementById(fieldName);
+            var value = field.value.trim();
+            var errorSpan = document.getElementById(fieldName.replace(/([A-Z])/g, function(m) { return m; }) + "Error")
+                           || document.getElementById(fieldName.charAt(0).toLowerCase() + fieldName.slice(1) + "Error");
+
+            // Map field IDs to error span IDs
+            var errorMap = {
+                "fullName": "nameError",
+                "email": "emailError",
+                "subject": "subjectError",
+                "message": "messageError"
+            };
+            errorSpan = document.getElementById(errorMap[fieldName]);
+
+            if (rule.required && value === "") {
+                this.errors[fieldName] = rule.label + " is required.";
+                if (errorSpan) errorSpan.textContent = this.errors[fieldName];
+                field.classList.add("input-error");
+                return false;
+            }
+
+            if (rule.minLength && value.length < rule.minLength) {
+                this.errors[fieldName] = rule.label + " must be at least " + rule.minLength + " characters.";
+                if (errorSpan) errorSpan.textContent = this.errors[fieldName];
+                field.classList.add("input-error");
+                return false;
+            }
+
+            if (rule.pattern && !rule.pattern.test(value)) {
+                this.errors[fieldName] = "Please enter a valid " + rule.label.toLowerCase() + ".";
+                if (errorSpan) errorSpan.textContent = this.errors[fieldName];
+                field.classList.add("input-error");
+                return false;
+            }
+
+            // Field is valid
+            if (errorSpan) errorSpan.textContent = "";
+            field.classList.remove("input-error");
+            delete this.errors[fieldName];
+            return true;
+        };
+
+        // Method: validate all fields
+        FormValidator.prototype.validateAll = function() {
+            this.errors = {};
+            var isValid = true;
+            for (var fieldName in this.rules) {
+                if (!this.validateField(fieldName)) {
+                    isValid = false;
+                }
+            }
+            return isValid;
+        };
+
+        // Method: reset the form
+        FormValidator.prototype.reset = function() {
+            this.form.reset();
+            this.errors = {};
+            var errorSpans = this.form.querySelectorAll(".error-msg");
+            for (var i = 0; i < errorSpans.length; i++) {
+                errorSpans[i].textContent = "";
+            }
+            var inputs = this.form.querySelectorAll(".input-error");
+            for (var j = 0; j < inputs.length; j++) {
+                inputs[j].classList.remove("input-error");
+            }
+        };
+
+        // Create validator instance
+        var validator = new FormValidator("contactForm");
+
+        // Form submit handler
+        document.getElementById("contactForm").addEventListener("submit", function(e) {
+            e.preventDefault();
+            if (validator.validateAll()) {
+                // Show thank you modal
+                document.getElementById("thankYouModal").style.display = "flex";
+                validator.reset();
+            }
+        });
+
+        // Close modal function
+        function closeModal() {
+            document.getElementById("thankYouModal").style.display = "none";
+        }
+
+        // Close modal on outside click
+        document.getElementById("thankYouModal").addEventListener("click", function(e) {
+            if (e.target === this) {
+                closeModal();
+            }
+        });
+    </script>
+</body>
+</html>

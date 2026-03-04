@@ -1,0 +1,44 @@
+{
+    "faqs": [
+        {
+            "id": 1,
+            "question": "How does FreshBite Meal Prep work?",
+            "answer": "It's simple! Choose a meal plan that fits your lifestyle, pick your favorite meals from our weekly rotating menu, and we'll prepare and deliver them fresh to your door. All meals are chef-prepared using high-quality, locally sourced ingredients."
+        },
+        {
+            "id": 2,
+            "question": "What areas do you deliver to?",
+            "answer": "We currently deliver to most major metropolitan areas across the country. Enter your zip code on our enrollment page to check if delivery is available in your area. We're expanding every month!"
+        },
+        {
+            "id": 3,
+            "question": "Can I customize my meals for dietary restrictions?",
+            "answer": "Absolutely! We offer options for vegetarian, vegan, gluten-free, keto, and other dietary needs. You can set your preferences during enrollment and update them anytime from your account dashboard."
+        },
+        {
+            "id": 4,
+            "question": "How fresh are the meals when they arrive?",
+            "answer": "Our meals are prepared fresh the same day they ship. They arrive in insulated, eco-friendly packaging with ice packs to keep everything at the perfect temperature. Meals stay fresh in your fridge for up to 5 days."
+        },
+        {
+            "id": 5,
+            "question": "Can I skip a week or cancel my subscription?",
+            "answer": "Yes! You have full flexibility. You can skip any week, pause your subscription, or cancel anytime with no penalties. Just make changes at least 48 hours before your next delivery date."
+        },
+        {
+            "id": 6,
+            "question": "How much does it cost per meal?",
+            "answer": "Our meals start at just $8.99 per serving. The more meals you order per week, the more you save. Check out our pricing page for detailed plan breakdowns and current promotions."
+        },
+        {
+            "id": 7,
+            "question": "Is the packaging environmentally friendly?",
+            "answer": "Yes! Sustainability is one of our core values. We use recyclable and compostable packaging materials. Our insulated liners are made from recycled denim, and our ice packs contain only water — just drain and recycle the plastic."
+        },
+        {
+            "id": 8,
+            "question": "How do I heat up the meals?",
+            "answer": "Each meal comes with easy-to-follow heating instructions. Most meals can be reheated in the microwave in 3-4 minutes or in the oven in about 10-15 minutes. Some meals are designed to be enjoyed cold, like our salads and grain bowls."
+        }
+    ]
+}
