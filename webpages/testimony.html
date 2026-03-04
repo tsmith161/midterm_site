@@ -48,6 +48,8 @@
             font-style: italic;
             line-height: 1.6;
             font-size: 16px;
+        h3 {
+            color:#2E7D32;
         }
     </style>
 </head>
@@ -87,6 +89,20 @@
                 document.getElementById("menu").style.visibility = "hidden";
             }
         }
+
+        function loadTestimonials() {
+            Object.entries(testimonials).forEach(function([name, info]) {
+                let str = "<div class='box'>";
+                str += "<h3>Name: " + name +"</h3>";
+                str += "<p>Occupation: " + info["title"] +"</p>";
+                str += "<p>Rating: " + info["rating"] +"</p>";
+                str += "<p><strong>\"" + info["testimony"] + "\"</strong></p>";
+                str += "</div>";
+                document.write(str);
+            });
+        }
+
+        loadTestimonials();
     </script>
     <!-- End of Standard Header -->
 
