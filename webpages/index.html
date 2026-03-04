@@ -37,6 +37,38 @@
             background-color: green;
             color: white;
         }
+
+        .benefits-section {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 30px;
+          margin: 40px auto;
+          max-width: 800px;
+          padding: 20px;
+        }
+
+        .benefits-box {
+          border: 2px solid #ff9800;
+          border-radius: 15px;
+          padding: 20px;
+          width: 100%;
+          background-color: #fff3e0;
+        }
+
+        .benefits-box ul {
+          list-style-type: disc;
+          margin-left: 20px;
+        }
+
+        .testimonial-box {
+          border: 2px solid #ff9800;
+          border-radius: 15px;
+          padding: 20px;
+          width: 100%;
+          background-color: #fff3e0;
+          text-align: center;
+        }
     </style>
 </head>
 <body>
@@ -78,4 +110,21 @@
         <p>Chef-prepared meals customized to your lifestyle</p>
         <a href="about.html"><button>Start your Plan</button></a>
      </div>
+
+     <section class="benefits-section">
+  <div class="benefits-box">
+    <h2>Benefits</h2>
+    <ul>
+      <li>Save time on meal prep</li>
+      <li>Healthy, balanced meals</li>
+      <li>Delivered fresh to your door</li>
+      <li>Customizable to your preferences</li>
+    </ul>
+  </div>
+
+  <div class="testimonial-box">
+    <h3>Don’t just take it from us – hear from our customers</h3>
+    <p id="testimonial">"This service has completely changed my week!" – Alex</p>
+  </div>
+</section>
 </body>
