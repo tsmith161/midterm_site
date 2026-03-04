@@ -9,21 +9,15 @@
     <link rel="stylesheet" href="../stylesheets/header.css">
     <link rel="stylesheet" href="../stylesheets/pages.css">
     <style>
-        .contentWrap {
-            width: min(900px, 92%);
-            margin: 0 auto;
-            color: #1F3A1F;
-        }
-
-        .formCard {
+        .enroll-card {
             background-color: #fff3e0;
             border: 2px solid #ff9800;
             border-radius: 15px;
-            padding: 20px;
+            padding: 25px;
             margin-bottom: 24px;
         }
 
-        .formCard h2 {
+        .enroll-card h3 {
             margin-top: 0;
             margin-bottom: 6px;
             color: #2E7D32;
@@ -126,7 +120,7 @@
         }
 
         @media (max-width: 400px) {
-            .formCard {
+            .enroll-card {
                 padding: 14px;
             }
         }
@@ -173,10 +167,12 @@
     </script>
 
     <!-- End of Standard Header -->
-    <div class="contentWrap">
-        <section class="formCard">
-            <h2>Enroll in FreshBite</h2>
-            <p>Complete this quick form and our team will prepare your first delivery schedule.</p>
+    <div class="page-container">
+        <h2 class="page-title">Enroll in FreshBite</h2>
+        <p class="page-subtitle">Complete this quick form and our team will prepare your first delivery schedule.</p>
+
+        <section class="enroll-card">
+            <h3>Your Details</h3>
 
             <div id="errorBox" class="errorBox"></div>
 
