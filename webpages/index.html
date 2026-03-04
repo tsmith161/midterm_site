@@ -1,7 +1,31 @@
 <head>
     <link rel="stylesheet" href="../stylesheets/header.css">
+    <style>
+        .hero {
+            width: 80%;
+            height: 200px;
+            margin-left: 10%;
+            margin-right: 10%;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            background-color: darkgreen;
+            border-radius: 15px;
+            border-color: darkgreen;
+        }
+
+        .hero h2 {
+            border-radius: 15px;
+            background-color:rgb(1, 128, 1);
+
+            color: white;
+        }
+    </style>
 </head>
 <body>
+    <!-- Beginning of Standard Hearder -->
     <div class="header">
         <a href = "index.html"><img src="../pictures/freshlogo_s.png"></a>
         <div class="brandBox">
@@ -32,4 +56,12 @@
             }
         }
     </script>
+
+    <!-- End of Standard Header -->
+
+    <div class="hero">
+        <h2>Healthy Meals Delivered to Your Door</h2>
+        <p>Chef-prepared meals customized to your lifestyle — ready when you are.</p>
+        <a href="plans.html" class="cta-button">Start Your Plan</a>
+    </div>
 </body>
