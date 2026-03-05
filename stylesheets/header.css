@@ -31,12 +31,14 @@
 .brandBox h1 {
     color: #F5F5F5;
     margin: 5px;
+    font-size: 48pt;
     font-family: 'Times New Roman', serif;
 }
 /* Brand Motto */
 .brandBox p {
     color: #FF9800;
     margin: 0px;
+    font-size: 18pt;
 }
 
 .brandBox {
@@ -144,6 +146,12 @@ body {
     .header img {
         height: 160px;
     }
+    .brandBox h1 {
+        font-size: 24pt;
+    }
+    .brandBox p {
+        font-size: 12pt;
+    }
     .menu {
         top: 80px;
     }
@@ -158,16 +166,15 @@ body {
     .header img {
         height: 80px;
     }
+    .brandBox h1 {
+        font-size: 18pt;
+    }
     .menu {
         top: 40px;
         width: 180px;
         right: 10px;
     }
-
-    .brandBox h1 {
-        font-size: 14px;
-    }
     .brandBox p {
-        font-size: 10px;
+        font-size: 8pt;
     }
 }
