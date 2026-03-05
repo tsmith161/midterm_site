@@ -132,6 +132,30 @@ body {
     height: 50px;
  }
 
+ @media (max-width: 1200px) {
+    .header {
+        height: 130px;
+    }
+    .space {
+        height: 130px;
+    }
+    .header a img {
+        height: 100px;
+    }
+    .brandBox h1 {
+        font-size: 30pt;
+    }
+    .brandBox p {
+        font-size: 12pt;
+    }
+    .menu {
+        top: 165px;
+    }
+    body {
+        margin-top: 150px;
+    }
+ }
+
 
 /* Autoadjusting for smaller screens */
 @media (max-width:800px) {
@@ -154,7 +178,7 @@ body {
         top: 145px;
     }
     body {
-        margin-top: 140px;
+        margin-top: 110px;
     }
 }
 @media (max-width: 500px) {
@@ -180,6 +204,6 @@ body {
     }
 
     body {
-        margin-top: 100px;
+        margin-top: 70px;
     }
 }
