@@ -141,7 +141,7 @@ body {
     .space {
         height: 110px;
     }
-    .header img {
+    .header a img {
         height: 80px;
     }
     .brandBox h1 {
@@ -164,7 +164,7 @@ body {
     .space {
         height: 70px;
     }
-    .header img {
+    .header a img {
         height: 40px;
     }
     .brandBox h1 {
