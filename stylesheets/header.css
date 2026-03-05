@@ -153,6 +153,9 @@ body {
     .menu {
         top: 145px;
     }
+    body {
+        margin-top: 140px;
+    }
 }
 @media (max-width: 400px) {
     .header {
@@ -174,5 +177,9 @@ body {
     }
     .brandBox p {
         font-size: 8pt;
+    }
+
+    body {
+        margin-top: 100px;
     }
 }
