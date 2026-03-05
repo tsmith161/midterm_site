@@ -36,7 +36,7 @@
 }
 /* Brand Motto */
 .brandBox p {
-    color: #FF9800;
+    color: #F5F5F5;
     margin: 0px;
     font-size: 18pt;
 }
@@ -100,7 +100,7 @@ body {
 
 .menu a {
     text-decoration: none;
-    color: #FF9800;
+    color: #F5F5F5;
     padding: 6px 20px;
     transition: background-color 0.2s ease;
 }
