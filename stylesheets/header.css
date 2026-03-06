@@ -183,10 +183,10 @@ body {
 }
 @media (max-width: 500px) {
     .header {
-        height: 70px;
+        height: 90px;
     }
     .space {
-        height: 70px;
+        height: 90px;
     }
     .header a img {
         height: 40px;
@@ -195,7 +195,7 @@ body {
         font-size: 14pt;
     }
     .menu {
-        top: 105px;
+        top: 125px;
         width: 180px;
         right: 10px;
     }
@@ -204,6 +204,6 @@ body {
     }
 
     body {
-        margin-top: 70px;
+        margin-top: 90px;
     }
 }
