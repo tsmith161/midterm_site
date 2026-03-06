@@ -132,7 +132,7 @@ body {
     height: 50px;
  }
 
- @media (max-width: 1200px) {
+ @media (max-width: 1300px) {
     .header {
         height: 130px;
     }
