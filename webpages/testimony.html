@@ -67,7 +67,7 @@
             <span></span>
         </button>
     </div>
-    <div style="height:150px"></div>
+    
     <div class="menu" id="menu">
         <a href="index.html"><h2>Home</h2></a>
         <a href="about.html"><h2>About Us</h2></a>
@@ -79,8 +79,6 @@
         <a href="enrollment_form.html"><h2>Enroll</h2></a>
     </div>
 
-    <div style="height:40px"></div>
-
     <script>
         function toggleMenu() {
             if (document.getElementById("menu").style.visibility == "hidden") {
@@ -89,20 +87,6 @@
                 document.getElementById("menu").style.visibility = "hidden";
             }
         }
-
-        function loadTestimonials() {
-            Object.entries(testimonials).forEach(function([name, info]) {
-                let str = "<div class='box'>";
-                str += "<h3>Name: " + name +"</h3>";
-                str += "<p>Occupation: " + info["title"] +"</p>";
-                str += "<p>Rating: " + info["rating"] +"</p>";
-                str += "<p><strong>\"" + info["testimony"] + "\"</strong></p>";
-                str += "</div>";
-                document.write(str);
-            });
-        }
-
-        loadTestimonials();
     </script>
     <!-- End of Standard Header -->
 
