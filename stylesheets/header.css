@@ -119,7 +119,6 @@ body {
     justify-content: center;
     align-items: center;
     gap: 12px;
-    margin-top: 25px;
 }
 
 .footer a {
@@ -134,9 +133,6 @@ body {
 
  @media (max-width: 1300px) {
     .header {
-        height: 130px;
-    }
-    .space {
         height: 130px;
     }
     .header a img {
@@ -162,9 +158,6 @@ body {
     .header {
         height: 110px;
     }
-    .space {
-        height: 110px;
-    }
     .header a img {
         height: 80px;
     }
@@ -183,9 +176,6 @@ body {
 }
 @media (max-width: 600px) {
     .header {
-        height: 90px;
-    }
-    .space {
         height: 90px;
     }
     .header a img {
