@@ -10,17 +10,28 @@
     <link rel="stylesheet" href="../stylesheets/pages.css">
     <style>
         .about-container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
+            height: fit-content;
+            width: 90%;
+            background-color: #fff3e0;
+            justify-self: center;
+            margin-top: 0px;
+
+            border: 2px solid #ff9800;
+            border-radius: 15px;
         }
 
         .about-section {
-            border: 2px solid #ff9800;
-            border-radius: 15px;
             padding: 25px;
-            background-color: #fff3e0;
             margin-bottom: 25px;
+        }
+
+        h3 {
+            color:#2E7D32;
+            font-size: 40pt;
+        }
+
+        p {
+            font-size: 16pt;
         }
 
         .about-section h2 {
@@ -57,6 +68,7 @@
             min-width: 150px;
             max-width: 200px;
             padding: 15px;
+
             background-color: white;
             border-radius: 10px;
             border: 1px solid #ffcc80;
@@ -72,14 +84,36 @@
             font-size: 40px;
         }
 
-        @media (max-width: 500px) {
+         @media (max-width: 1200px) {
+            h3 {
+                font-size: 32pt;
+            }
+
+            p {
+                font-size: 14pt;
+            }
+        }
+
+        @media (max-width: 900px) {
+            h3 {
+                font-size: 24pt;
+            }
+            p {
+                font-size: 10pt;
+            }
+        }
+
+        @media (max-width: 600px) {
+            h3 {
+                font-size: 20pt;
+            }
+            p {
+                font-size: 8pt;
+            }
             .team-grid {
                 flex-direction: column;
                 align-items: center;
             }
-        }
-        h3 {
-            color:#2E7D32;
         }
     </style>
 </head>
@@ -158,7 +192,7 @@
             <p>And we're just getting started.</p>
         </div>
 
-        <div class="about-section">
+        <div class="about-section" style="text-align: center;">
             <h2>Meet Our Team</h2>
             <div class="team-grid">
                 <div class="team-member">
