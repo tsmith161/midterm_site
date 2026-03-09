@@ -9,45 +9,33 @@
     <link rel="stylesheet" href="../stylesheets/header.css">
     <link rel="stylesheet" href="../stylesheets/pages.css">
     <style>
-        .container {
-            height: fit-content;
-            width: 90%;
-            background-color: #fff3e0;
-            justify-self: center;
-            margin-top: 0px;
-
-            border: 2px solid #ff9800;
-            border-radius: 15px;
-        }
+        /* Full-width stretched hero */
         .hero {
-            height: 500px;
-            width: 90%;
-            justify-self: center;
-
-            max-width: 1000px;
+            width: 100%;
+            min-height: 500px;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            border-radius: 20px;
             background-image: url("../pictures/backgroundHero2.jpg");
             background-size: cover;
             background-position: center;
-
-            margin-top: 25px;
         }
 
         .hero h2 {
             color: white;
-            text-shadow: -2px -2px 0 black, 2px -2px 0 black, -2px 2px 0 black, 2px 2px 0 black;
-            font-size: 32px;
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+            font-size: 42px;
+            font-family: 'Times New Roman', Georgia, serif;
             text-align: center;
             padding: 0 20px;
+            margin-bottom: 5px;
         }
 
         .hero p {
             color: white;
-            text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
+            font-size: 18px;
+            text-shadow: 1px 1px 4px rgba(0,0,0,0.6);
         }
 
         .hero button {
@@ -56,117 +44,111 @@
             margin-top: 20px;
             border-radius: 10px;
             border: none;
-            padding: 14px 40px;
-            font-size: 18px;
+            padding: 16px 48px;
+            font-size: 20px;
             font-weight: bold;
+            font-family: 'Poppins', sans-serif;
             cursor: pointer;
-            transition: background-color 0.3s ease;
+            transition: background-color 0.3s ease, transform 0.2s ease;
         }
 
         .hero button:hover {
             background-color: #e68a00;
+            transform: scale(1.05);
         }
 
+        /* FreshBite brand on white for visibility */
+        .brand-banner {
+            text-align: center;
+            padding: 50px 20px;
+            background-color: white;
+        }
+
+        .brand-banner h2 {
+            font-family: 'Times New Roman', Georgia, serif;
+            font-size: 48px;
+            color: #2E7D32;
+            margin: 0 0 8px 0;
+        }
+
+        .brand-banner p {
+            font-size: 18px;
+            color: #555;
+            margin: 0;
+        }
+
+        /* Benefits as individual cards, no wrapping box */
         .benefits-section {
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-        }
-
-        .benefits-box {
-          text-align: center;
-        }
-
-        .benefits-box ul {
-            list-style-position: inside;
-            padding-left: 0;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
             text-align: center;
         }
 
-        .benefits-box h2 {
-          color: #2E7D32;
-          margin-top: 0;
+        .benefits-section h3 {
+            color: #2E7D32;
+            font-family: 'Times New Roman', Georgia, serif;
+            font-size: 32px;
+            margin-bottom: 20px;
         }
 
-        h3 {
-            color:#2E7D32;
-            font-size: 48pt;
+        .benefits-grid {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
         }
 
-        p {
-            font-size: 16pt;
+        .benefits-grid li {
+            flex: 1;
+            min-width: 180px;
+            max-width: 220px;
+            padding: 20px;
+            background-color: #fff3e0;
+            border: 2px solid #ff9800;
+            border-radius: 15px;
+            font-size: 16px;
+            color: #333;
+            line-height: 1.5;
         }
 
-        .benefits-box ul {
-          list-style-type: disc;
-          margin-left: 20px;
+        /* Testimonial teaser - no box */
+        .testimonial-teaser {
+            text-align: center;
+            padding: 30px 20px 50px;
+            max-width: 700px;
+            margin: 0 auto;
         }
 
-        .benefits-box li {
-          margin-bottom: 8px;
-          line-height: 1.5;
+        .testimonial-teaser h3 {
+            color: #2E7D32;
+            font-family: 'Times New Roman', Georgia, serif;
+            font-size: 28px;
+            margin-bottom: 15px;
         }
 
-        .testimonial-box {
-          padding: 20px;
-          width: 100%;
-          text-align: center;
-          box-sizing: border-box;
-        }
-
-        .testimonial-box h3 {
-          color: #2E7D32;
-        }
-
-        @media (max-width: 1200px) {
-            .hero {
-                height: 400px;
-                border-radius: 15px;
-            }
-            .hero h2 {
-                font-size: 24pt;
-            }
-
-            h3 {
-                font-size: 40pt;
-            }
-
-            p {
-                font-size: 14pt;
-            }
+        .testimonial-teaser p {
+            font-size: 18px;
+            color: #555;
+            font-style: italic;
         }
 
         @media (max-width: 900px) {
-            .hero {
-                height: 300px;
-                border-radius: 15px;
-                margin-top: 15px;
-            }
-            .hero h2 {
-                font-size: 24pt;
-            }
-            h3 {
-                font-size: 32pt;
-            }
-            p {
-                font-size: 10pt;
-            }
+            .hero { min-height: 350px; }
+            .hero h2 { font-size: 28px; }
+            .brand-banner h2 { font-size: 36px; }
         }
 
         @media (max-width: 600px) {
-            .hero {
-                height: 280px;
-                margin-top: 10px;
-            }
-            .hero h2 {
-                font-size: 18pt;
-            }
-            h3 {
-                font-size: 24pt;
-            }
-            p {
-                font-size: 8pt;
-            }
+            .hero { min-height: 280px; }
+            .hero h2 { font-size: 22px; }
+            .hero p { font-size: 14px; }
+            .hero button { padding: 12px 32px; font-size: 16px; }
+            .brand-banner h2 { font-size: 28px; }
+            .brand-banner p { font-size: 14px; }
+            .benefits-grid li { min-width: 140px; }
         }
     </style>
 </head>
@@ -188,12 +170,12 @@
     <div class="menu" id="menu">
         <a href="index.html"><h2>Home</h2></a>
         <a href="about.html"><h2>About</h2></a>
+        <a href="howitworks.html"><h2>How It Works</h2></a>
+        <a href="pricing.html"><h2>Pricing</h2></a>
         <a href="testimony.html"><h2>Testimonies</h2></a>
         <a href="faq.html"><h2>FAQ</h2></a>
-        <a href="howitworks.html"><h2>How It Works</h2></a>
         <a href="contact.html"><h2>Contact</h2></a>
-        <a href="pricing.html"><h2>Pricing</h2></a>
-        <a href="enrollment_form.html"><h2>Enroll</h2></a>
+        <a href="enrollment_form.html"><h2>Join</h2></a>
     </div>
 
     <script>
@@ -207,29 +189,34 @@
     </script>
     <!-- End of Standard Header -->
 
-    <div class="container">
+    <!-- Full-width stretched hero -->
     <div class="hero">
         <h2>Healthy Meals Delivered to Your Door</h2>
         <p>Chef-prepared meals customized to your lifestyle</p>
         <a href="enrollment_form.html"><button>Start Your Plan</button></a>
     </div>
 
-    <div class="benefits-section">
-        <div class="benefits-box">
-          <h3>Benefits</h3>
-          <ul>
-            <li><p>Save time on meal prep</p></li>
-            <li><p>Healthy, balanced meals</p></li>
-            <li><p>Delivered fresh to your door</p></li>
-            <li><p>Customizable to your preferences</p></li>
-          </ul>
-        </div>
-
-        <div class="testimonial-box">
-          <h3>Don't just take it from us - hear from our customers</h3>
-          <p>"This service has completely changed my week!" - Alex</p>
-        </div>
+    <!-- FreshBite brand on white for accessibility -->
+    <div class="brand-banner">
+        <h2>FreshBite Meal Prep</h2>
+        <p>Fresh ingredients. Real chefs. Delivered weekly.</p>
     </div>
+
+    <!-- Benefits as individual cards, no wrapping box -->
+    <div class="benefits-section">
+        <h3>Why Choose FreshBite?</h3>
+        <ul class="benefits-grid">
+            <li>Save time on meal prep</li>
+            <li>Healthy, balanced meals</li>
+            <li>Delivered fresh to your door</li>
+            <li>Customizable to your preferences</li>
+        </ul>
+    </div>
+
+    <!-- Testimonial teaser, no box -->
+    <div class="testimonial-teaser">
+        <h3>Don't just take it from us</h3>
+        <p>"This service has completely changed my week!" — Alex, College Student</p>
     </div>
 
     <!-- Footer -->

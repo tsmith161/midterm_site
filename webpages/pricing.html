@@ -15,18 +15,18 @@
             color: #1F3A1F;
         }
 
+        /* No box around intro - plain centered text */
         .pageIntro {
-            background-color: #fff3e0;
-            border: 2px solid #ff9800;
-            border-radius: 15px;
-            padding: 22px;
+            text-align: center;
+            padding: 10px 22px 20px;
             margin-bottom: 20px;
         }
 
-        .pageIntro h2 {
-            margin-top: 0;
-            margin-bottom: 8px;
-            color: #2E7D32;
+        .pageIntro p {
+            color: #555;
+            font-size: 16px;
+            max-width: 700px;
+            margin: 0 auto;
         }
 
         .pricingGrid {
@@ -103,12 +103,12 @@
     <div class="menu" id="menu">
         <a href="index.html"><h2>Home</h2></a>
         <a href="about.html"><h2>About</h2></a>
+        <a href="howitworks.html"><h2>How It Works</h2></a>
+        <a href="pricing.html"><h2>Pricing</h2></a>
         <a href="testimony.html"><h2>Testimonies</h2></a>
         <a href="faq.html"><h2>FAQ</h2></a>
-        <a href="howitworks.html"><h2>How It Works</h2></a>
         <a href="contact.html"><h2>Contact</h2></a>
-        <a href="pricing.html"><h2>Pricing</h2></a>
-        <a href="enrollment_form.html"><h2>Enroll</h2></a>
+        <a href="enrollment_form.html"><h2>Join</h2></a>
     </div>
 
     <script>
@@ -123,10 +123,8 @@
     <!-- End of Standard Header -->
 
     <div class="contentWrap">
-        <section class="pageIntro">
-            <h2>Subscription Pricing</h2>
-            <p>Choose a weekly meal plan that fits your goals. Every box includes fresh ingredients, chef-crafted recipes, and direct-to-door delivery.</p>
-        </section>
+        <h2 class="page-title">Pricing</h2>
+        <p class="page-subtitle">Choose a weekly meal plan that fits your goals. Every box includes fresh ingredients, chef-crafted recipes, and direct-to-door delivery.</p>
 
         <section id="pricingGrid" class="pricingGrid" aria-label="Pricing plans">
             <p>Loading pricing plans...</p>
