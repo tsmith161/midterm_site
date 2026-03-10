@@ -12,20 +12,25 @@
         .testimonials-container {
             max-width: 80%;
             margin: 0 auto;
-            padding: 20px;
-
-            border: 2px solid #ff9800;
-            border-radius: 15px;
+            padding: 30px;
+            border-radius: 16px;
             background-color: #2E7D32;
         }
 
         .testimonial-card {
-            border: 2px solid #ff9800;
-            border-radius: 15px;
-            padding: 25px;
-            background-color: #fff3e0;
+            border: none;
+            border-radius: 12px;
+            padding: 28px;
+            background-color: white;
             text-align: center;
             margin-bottom: 20px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 18px rgba(0,0,0,0.12);
         }
 
         .testimonial-card .name {
@@ -59,9 +64,9 @@
         .page-title {
             text-align: center;
             color: #ffffff;
-            font-family: 'Times New Roman', serif;
-            font-size: 28px;
-            margin-bottom: 5px;
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 32px;
+            margin-bottom: 8px;
         }
         .page-subtitle {
             color: #ffffff;

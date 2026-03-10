@@ -9,87 +9,94 @@
     <link rel="stylesheet" href="../stylesheets/header.css">
     <link rel="stylesheet" href="../stylesheets/pages.css">
     <style>
-        /* Full-width stretched hero */
+        /* Full-width hero with overlay */
         .hero {
             width: 100%;
-            min-height: 500px;
+            min-height: 520px;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            background-image: url("../pictures/backgroundHero2.jpg");
+            background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url("../pictures/hero.jpg");
             background-size: cover;
             background-position: center;
         }
 
         .hero h2 {
             color: white;
-            text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
-            font-size: 42px;
-            font-family: 'Times New Roman', Georgia, serif;
+            font-size: 48px;
+            font-family: 'Playfair Display', Georgia, serif;
             text-align: center;
             padding: 0 20px;
-            margin-bottom: 5px;
+            margin-bottom: 8px;
+            letter-spacing: 1px;
         }
 
         .hero p {
-            color: white;
+            color: rgba(255,255,255,0.9);
             font-size: 18px;
-            text-shadow: 1px 1px 4px rgba(0,0,0,0.6);
+            font-weight: 300;
+            letter-spacing: 0.5px;
         }
 
         .hero button {
             background-color: #FF9800;
             color: white;
-            margin-top: 20px;
-            border-radius: 10px;
+            margin-top: 24px;
+            border-radius: 50px;
             border: none;
-            padding: 16px 48px;
-            font-size: 20px;
-            font-weight: bold;
+            padding: 16px 52px;
+            font-size: 18px;
+            font-weight: 600;
             font-family: 'Poppins', sans-serif;
             cursor: pointer;
-            transition: background-color 0.3s ease, transform 0.2s ease;
+            letter-spacing: 0.5px;
+            transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+            box-shadow: 0 4px 15px rgba(255, 152, 0, 0.3);
         }
 
         .hero button:hover {
             background-color: #e68a00;
-            transform: scale(1.05);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(255, 152, 0, 0.4);
         }
 
-        /* FreshBite brand on white for visibility */
+        /* Brand banner */
         .brand-banner {
             text-align: center;
-            padding: 50px 20px;
+            padding: 60px 20px;
             background-color: white;
         }
 
         .brand-banner h2 {
-            font-family: 'Times New Roman', Georgia, serif;
-            font-size: 48px;
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 44px;
             color: #2E7D32;
-            margin: 0 0 8px 0;
+            margin: 0 0 10px 0;
+            letter-spacing: 1px;
         }
 
         .brand-banner p {
-            font-size: 18px;
-            color: #555;
+            font-size: 17px;
+            color: #666;
             margin: 0;
+            font-weight: 300;
+            letter-spacing: 0.5px;
         }
 
-        /* Benefits as individual cards, no wrapping box */
+        /* Benefits section */
         .benefits-section {
-            max-width: 900px;
+            max-width: 960px;
             margin: 0 auto;
-            padding: 40px 20px;
+            padding: 50px 20px;
             text-align: center;
         }
 
         .benefits-section h3 {
             color: #2E7D32;
-            font-family: 'Times New Roman', Georgia, serif;
+            font-family: 'Playfair Display', Georgia, serif;
             font-size: 32px;
-            margin-bottom: 20px;
+            margin-bottom: 30px;
         }
 
         .benefits-grid {
@@ -105,26 +112,39 @@
             flex: 1;
             min-width: 180px;
             max-width: 220px;
-            padding: 20px;
-            background-color: #fff3e0;
-            border: 2px solid #ff9800;
-            border-radius: 15px;
+            padding: 28px 20px;
+            background-color: white;
+            border: 1px solid #e0e0e0;
+            border-radius: 12px;
             font-size: 16px;
-            color: #333;
-            line-height: 1.5;
+            color: #444;
+            line-height: 1.6;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
-        /* Testimonial teaser - no box */
+        .benefits-grid li:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+        }
+
+        .benefit-icon {
+            font-size: 32px;
+            display: inline-block;
+            margin-bottom: 4px;
+        }
+
+        /* Testimonial teaser */
         .testimonial-teaser {
             text-align: center;
-            padding: 30px 20px 50px;
+            padding: 40px 20px 60px;
             max-width: 700px;
             margin: 0 auto;
         }
 
         .testimonial-teaser h3 {
             color: #2E7D32;
-            font-family: 'Times New Roman', Georgia, serif;
+            font-family: 'Playfair Display', Georgia, serif;
             font-size: 28px;
             margin-bottom: 15px;
         }
@@ -133,20 +153,21 @@
             font-size: 18px;
             color: #555;
             font-style: italic;
+            line-height: 1.6;
         }
 
         @media (max-width: 900px) {
-            .hero { min-height: 350px; }
-            .hero h2 { font-size: 28px; }
-            .brand-banner h2 { font-size: 36px; }
+            .hero { min-height: 380px; }
+            .hero h2 { font-size: 32px; }
+            .brand-banner h2 { font-size: 34px; }
         }
 
         @media (max-width: 600px) {
-            .hero { min-height: 280px; }
-            .hero h2 { font-size: 22px; }
+            .hero { min-height: 300px; }
+            .hero h2 { font-size: 24px; }
             .hero p { font-size: 14px; }
-            .hero button { padding: 12px 32px; font-size: 16px; }
-            .brand-banner h2 { font-size: 28px; }
+            .hero button { padding: 14px 36px; font-size: 16px; }
+            .brand-banner h2 { font-size: 26px; }
             .brand-banner p { font-size: 14px; }
             .benefits-grid li { min-width: 140px; }
         }
@@ -206,10 +227,10 @@
     <div class="benefits-section">
         <h3>Why Choose FreshBite?</h3>
         <ul class="benefits-grid">
-            <li>Save time on meal prep</li>
-            <li>Healthy, balanced meals</li>
-            <li>Delivered fresh to your door</li>
-            <li>Customizable to your preferences</li>
+            <li><span class="benefit-icon">&#9200;</span><br>Save time on meal prep</li>
+            <li><span class="benefit-icon">&#9889;</span><br>Healthy, balanced meals</li>
+            <li><span class="benefit-icon">&#128666;</span><br>Delivered fresh to your door</li>
+            <li><span class="benefit-icon">&#9881;</span><br>Customizable to your preferences</li>
         </ul>
     </div>
 

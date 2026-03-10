@@ -13,7 +13,7 @@
 .page-title {
     text-align: center;
     color: #2E7D32;
-    font-family: 'Times New Roman', Georgia, serif;
+    font-family: 'Playfair Display', Georgia, serif;
     font-size: 36px;
     margin-bottom: 8px;
 }
@@ -32,12 +32,13 @@
     margin-bottom: 12px;
     border-radius: 10px;
     overflow: hidden;
-    border: 2px solid #ff9800;
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.04);
 }
 
 .faq-question {
-    background-color: #fff3e0;
-    padding: 15px 20px;
+    background-color: white;
+    padding: 16px 20px;
     cursor: pointer;
     display: flex;
     justify-content: space-between;
@@ -46,11 +47,11 @@
 }
 
 .faq-question:hover {
-    background-color: #ffe0b2;
+    background-color: #f5f5f5;
 }
 
 .faq-question.active {
-    background-color: #ffe0b2;
+    background-color: #E8F5E9;
 }
 
 .faq-q-text {
@@ -95,10 +96,11 @@
 .contact-info-box {
     flex: 1;
     min-width: 250px;
-    border: 2px solid #ff9800;
-    border-radius: 15px;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
     padding: 25px;
-    background-color: #fff3e0;
+    background-color: white;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
 }
 
 .contact-info-box h3 {
@@ -114,7 +116,7 @@
 
 .contact-list li {
     padding: 10px 0;
-    border-bottom: 1px solid #ffcc80;
+    border-bottom: 1px solid #e8e8e8;
     color: #444;
 }
 
@@ -125,10 +127,11 @@
 .contact-form-box {
     flex: 2;
     min-width: 300px;
-    border: 2px solid #ff9800;
-    border-radius: 15px;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
     padding: 25px;
-    background-color: #fff3e0;
+    background-color: white;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
 }
 
 .contact-form-box h3 {
@@ -217,17 +220,20 @@
     background-color: #4CAF50;
     color: white;
     border: none;
-    padding: 12px 30px;
-    border-radius: 8px;
+    padding: 14px 30px;
+    border-radius: 50px;
     font-size: 16px;
-    font-weight: bold;
+    font-weight: 600;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
     width: 100%;
+    box-shadow: 0 2px 8px rgba(76,175,80,0.25);
 }
 
 .submit-btn:hover {
     background-color: #388E3C;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(76,175,80,0.35);
 }
 
 
@@ -257,7 +263,7 @@
 
 .modal-content h2 {
     color: #2E7D32;
-    font-family: 'Times New Roman', serif;
+    font-family: 'Playfair Display', Georgia, serif;
     margin-top: 0;
 }
 
@@ -270,43 +276,46 @@
     background-color: #FF9800;
     color: white;
     border: none;
-    padding: 10px 25px;
-    border-radius: 8px;
+    padding: 12px 30px;
+    border-radius: 50px;
     font-size: 14px;
-    font-weight: bold;
+    font-weight: 600;
     cursor: pointer;
     margin-top: 15px;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .modal-close-btn:hover {
     background-color: #e68a00;
+    transform: translateY(-1px);
 }
 
 
 /* ---- Footer ---- */
 .site-footer {
-    background-image: linear-gradient(to right, #4CAF50, #2E7D32);
+    background-color: #1B5E20;
     margin-top: 50px;
-    padding: 20px;
+    padding: 30px 20px;
 }
 
 .footer-content {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 15px;
+    gap: 18px;
     flex-wrap: wrap;
 }
 
 .footer-logo {
-    height: 50px;
+    height: 45px;
+    opacity: 0.9;
 }
 
 .footer-content p {
-    color: #F5F5F5;
+    color: rgba(255, 255, 255, 0.8);
     margin: 0;
     font-size: 13px;
+    letter-spacing: 0.3px;
 }
 
 

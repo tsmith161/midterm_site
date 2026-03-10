@@ -1,89 +1,71 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;600;700&display=swap');
 
+/* ---- Fixed Header ---- */
 .header {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    height: 150px;
+    height: 80px;
     display: flex;
     align-items: center;
-    padding: 0 20px;
-    background-image: linear-gradient(to right, #4CAF50, #2E7D32);
+    padding: 0 30px;
+    background: linear-gradient(135deg, #2E7D32 0%, #388E3C 50%, #43A047 100%);
     box-sizing: border-box;
     z-index: 1000;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.15);
 }
 
-/* Logo left */
+/* Logo */
 .header a img {
-    height: 80%; /* keeps some padding top/bottom */
-    max-height: 120px;
+    height: 60px;
     object-fit: contain;
+    flex-shrink: 0;
 }
 
-/* Brand in absolute center */
+/* Brand text hidden — logo already has brand name */
 .brandBox {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    height: 100%;
-}
-
-/* Brand Name */
-.brandBox h1 {
-    color: #F5F5F5;
-    margin: 5px;
-    font-size: 48pt;
-    font-family: 'Times New Roman', serif;
-}
-/* Brand Motto */
-.brandBox p {
-    color: #F5F5F5;
-    margin: 0px;
-    font-size: 18pt;
+    display: none;
 }
 
 /* Background and base font */
 body {
-    padding-top: 190px;
-    background-image: url("../pictures/bg.jpg");
-    background-repeat: repeat;
+    padding-top: 85px;
+    background-color: #fafafa;
     font-family: 'Poppins', 'Segoe UI', Tahoma, sans-serif;
     color: #333;
+    margin: 0;
 }
 
+/* ---- Hamburger ---- */
 .hamburger {
-  width: 35px;
-  height: 30px;
-  margin-left: auto;
-
-  position: relative;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 0;
+    width: 28px;
+    height: 22px;
+    margin-left: auto;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    flex-shrink: 0;
 }
 
 .hamburger span {
-  height: 4px;
-  width: 100%;
-  background-color: white;
-  border-radius: 2px;
-  transition: all 0.3s ease;
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    border-radius: 2px;
+    transition: all 0.3s ease;
 }
 
+/* ---- Dropdown Menu ---- */
 .menu {
     position: fixed;
-    top: 155px;
-    right: 5px;
+    top: 85px;
+    right: 10px;
     left: auto;
     z-index: 999;
 
@@ -91,33 +73,36 @@ body {
     flex-direction: column;
     align-items: stretch;
 
-    background-color: #206023;
+    background-color: #1B5E20;
     border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
-    padding: 10px 0;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    padding: 8px 0;
 
-    width: 220px;
+    width: 200px;
     visibility: hidden;
 }
 
 .menu a {
     text-decoration: none;
-    color: #F5F5F5;
-    padding: 6px 20px;
-    transition: background-color 0.2s ease;
+    color: rgba(255, 255, 255, 0.9);
+    padding: 10px 20px;
+    transition: background-color 0.2s ease, color 0.2s ease;
 }
 
 .menu a:hover {
-    background-color: #256d29;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #fff;
 }
 
 .menu h2 {
-    font-size: 12pt;
-    margin: 4px 0;
+    font-size: 13px;
+    margin: 0;
+    font-weight: 500;
 }
 
+/* ---- Old Footer (kept for compatibility) ---- */
 .footer {
-    background-image: linear-gradient(to right, #2E7D32, #1B5E20);
+    background-color: #1B5E20;
     padding: 12px;
     display: flex;
     justify-content: center;
@@ -134,71 +119,38 @@ body {
 
 .footer img {
     height: 50px;
- }
+}
 
- @media (max-width: 1300px) {
+/* ---- Responsive ---- */
+@media (max-width: 800px) {
     .header {
-        height: 130px;
+        height: 70px;
+        padding: 0 20px;
     }
     .header a img {
-        height: 100px;
-    }
-    .brandBox h1 {
-        font-size: 30pt;
-    }
-    .brandBox p {
-        font-size: 12pt;
+        height: 50px;
     }
     .menu {
-        top: 165px;
+        top: 75px;
     }
     body {
-        margin-top: 150px;
-    }
- }
-
-
-/* Autoadjusting for smaller screens */
-@media (max-width:800px) {
-    .header {
-        height: 110px;
-    }
-    .header a img {
-        height: 80px;
-    }
-    .brandBox h1 {
-        font-size: 24pt;
-    }
-    .brandBox p {
-        font-size: 12pt;
-    }
-    .menu {
-        top: 145px;
-    }
-    body {
-        margin-top: 110px;
+        padding-top: 75px;
     }
 }
+
 @media (max-width: 600px) {
     .header {
-        height: 90px;
+        height: 60px;
+        padding: 0 15px;
     }
     .header a img {
-        height: 40px;
-    }
-    .brandBox h1 {
-        font-size: 14pt;
+        height: 42px;
     }
     .menu {
-        top: 125px;
+        top: 65px;
         width: 180px;
-        right: 10px;
     }
-    .brandBox p {
-        font-size: 8pt;
-    }
-
     body {
-        margin-top: 90px;
+        padding-top: 65px;
     }
 }

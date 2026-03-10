@@ -37,29 +37,38 @@
         }
 
         .planCard {
-            background-color: #fff3e0;
-            border: 2px solid #ff9800;
-            border-radius: 15px;
-            padding: 20px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+            background-color: white;
+            border: 1px solid #e0e0e0;
+            border-radius: 12px;
+            padding: 28px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .planCard:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
         }
 
         .planCard h3 {
             margin-top: 0;
             color: #2E7D32;
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 22px;
         }
 
         .planTagline {
-            font-weight: bold;
+            font-weight: 600;
             margin-top: 0;
             color: #FF9800;
         }
 
         .planPrice {
-            font-size: 24px;
+            font-size: 28px;
             color: #2E7D32;
             font-weight: bold;
-            margin: 8px 0;
+            margin: 10px 0;
+            font-family: 'Playfair Display', Georgia, serif;
         }
 
         .planCard ul {
