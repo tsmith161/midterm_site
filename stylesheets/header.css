@@ -31,7 +31,7 @@
 /* Background and base font */
 body {
     padding-top: 85px;
-    background-color: #fafafa;
+    background-image: "../pictures/bg2.jpg";
     font-family: 'Poppins', 'Segoe UI', Tahoma, sans-serif;
     color: #333;
     margin: 0;
